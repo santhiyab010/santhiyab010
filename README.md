@@ -57,6 +57,18 @@
 
 ## 🚀 FEATURED PROJECTS
 
+---
+
+## 🎓 EDUCATION
+
+**Bachelor of Engineering — Electronics & Communication Engineering (ECE)**
+
+📍 Tamil Nadu, India
+
+### 🔍 Areas of Interest
+
+`Embedded Systems` • `VLSI` • `IoT` • `Full Stack Development` • `Digital Electronics`
+
 ### 🚨 SOS Safety Watch
 > **ESP32-based personal safety and emergency alert system**
 
