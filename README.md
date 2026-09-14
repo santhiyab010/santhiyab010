@@ -1,10 +1,14 @@
 <div align="center">
 
-# ⚡ SANTHIYA
+# ⚡ S A N T H I Y A
 
-### ECE Student • Embedded Systems • VLSI • Full Stack Development
+### `ECE STUDENT` • `DEVELOPER` • `BUILDER`
 
-*Learning • Building • Leveling Up*
+**Embedded Systems · VLSI · Full Stack Development**
+
+> *Learning. Building. Leveling Up.*
+
+[![GitHub](https://img.shields.io/badge/GitHub-santhiyab010-181717?style=for-the-badge&logo=github)](https://github.com/santhiyab010)
 
 </div>
 
