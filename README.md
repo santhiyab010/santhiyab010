@@ -53,21 +53,53 @@
 
 ---
 
+---
+
 ## 🚀 FEATURED PROJECTS
 
 ### 🚨 SOS Safety Watch
-ESP32-based emergency safety system with GPS, GSM, pulse monitoring, motion detection and manual emergency alert.
+> **ESP32-based personal safety and emergency alert system**
+
+A smart safety device designed to detect emergency situations and send alerts without depending on a smartphone.
+
+**Tech:** `ESP32` `GSM` `GPS` `Pulse Oximeter` `Accelerometer` `C/C++`
+
+**Features:**
+- 🆘 Manual emergency alert
+- 📡 GSM-based emergency messaging
+- 📍 GPS location sharing
+- ❤️ Pulse monitoring
+- 📳 Motion/shivering detection
+
+---
 
 ### 📚 Student Planner
-A student productivity platform with tasks, academic calendar, study tracking and Firebase integration.
+> **Student productivity & academic management platform**
 
-### ⚡ VLSI Projects
-Digital design and hardware projects as I continue developing my VLSI skills.
+A web application designed to help students organize their academic life and track their daily progress.
+
+**Tech:** `HTML` `CSS` `JavaScript` `Firebase`
+
+**Features:**
+- ✅ To-do list
+- 📅 Academic calendar
+- 📖 Study tracker
+- 👤 Individual student accounts
+- ☁️ Firebase database
+
+---
+
+### ⚡ VLSI & Embedded Projects
+> **Exploring digital electronics and hardware systems**
+
+A collection of projects focused on embedded systems, digital design and VLSI concepts.
+
+**Tech:** `C/C++` `ESP32` `Arduino` `MATLAB` `VLSI`
 
 ---
 
 <div align="center">
 
-### 🌱 Always Learning • Always Building
+### ⚔️ BUILD • LEARN • LEVEL UP
 
 </div>
