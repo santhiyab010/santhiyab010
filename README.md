@@ -14,28 +14,42 @@
 
 ---
 
-## ⚔️ CURRENT QUEST
+## ⚔️ DEVELOPER STATUS
 
-> **Building my developer skill tree one project at a time.**
+> **Currently leveling up my skills through real-world projects.**
 
-- 🌐 Full Stack Development
-- 🔥 Firebase & Web Applications
-- 🔧 Embedded Systems & IoT
-- ⚡ VLSI & Digital Electronics
-- 💻 C • C++ • Python • JavaScript
+| 🎯 Quest | 📌 Status |
+|---|---|
+| 🌐 Full Stack Development | 🟣 Learning |
+| 🔥 Firebase & Web Apps | 🟣 Building |
+| 🔧 Embedded Systems & IoT | 🟣 Building |
+| ⚡ VLSI & Digital Electronics | 🟣 Learning |
+| 💻 Programming | 🟣 Improving |
+
+### 🧭 Current Focus
+
+`Full Stack` `Firebase` `ESP32` `IoT` `VLSI` `C/C++` `Python` `JavaScript`
+
+---
 
 ---
 
 ## 🧠 SKILL TREE
 
-| Domain | Technologies |
-|---|---|
-| 💻 Programming | C, C++, Python, JavaScript |
-| 🌐 Web | HTML, CSS, JavaScript, React |
-| 🔥 Backend | Firebase, APIs |
-| 🔧 Embedded | ESP32, Arduino, GSM, GPS |
-| ⚡ Engineering | VLSI, Digital Electronics |
-| 🛠 Tools | Git, GitHub, MATLAB, Arduino IDE |
+### 💻 Programming
+`C` `C++` `Python` `JavaScript`
+
+### 🌐 Development
+`HTML` `CSS` `JavaScript` `React`
+
+### 🔧 Embedded Systems
+`ESP32` `Arduino` `GSM` `GPS` `IoT`
+
+### ⚡ Electronics
+`Digital Electronics` `VLSI` `Embedded Systems`
+
+### 🔥 Backend & Tools
+`Firebase` `Git` `GitHub` `MATLAB` `Arduino IDE`
 
 ---
 
