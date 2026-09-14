@@ -69,6 +69,16 @@
 
 `Embedded Systems` • `VLSI` • `IoT` • `Full Stack Development` • `Digital Electronics`
 
+---
+
+## 📊 GITHUB STATUS
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=santhiyab010&show_icons=true&theme=midnight-purple&hide_border=true" />
+
+</div>
+
 ### 🚨 SOS Safety Watch
 > **ESP32-based personal safety and emergency alert system**
 
