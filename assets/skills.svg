@@ -1,17 +1,17 @@
-<svg viewBox="0 0 850 340" width="100%" height="340" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 850 360" width="100%" height="360" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="skillsBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0c13" />
-      <stop offset="60%" stop-color="#12131d" />
-      <stop offset="100%" stop-color="#1a0d1b" />
+      <stop offset="0%" stop-color="#07080d" />
+      <stop offset="60%" stop-color="#0f111a" />
+      <stop offset="100%" stop-color="#180b18" />
     </linearGradient>
 
     <!-- Border Gradient -->
     <linearGradient id="borderGradSkills" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.35" />
+      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.4" />
       <stop offset="50%" stop-color="#ff2a75" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.45" />
     </linearGradient>
 
     <!-- Progress Bar Gradient -->
@@ -32,6 +32,15 @@
   </defs>
 
   <style>
+    @keyframes barGlow {
+      0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 42, 117, 0.5)); }
+      50% { filter: drop-shadow(0 0 10px rgba(255, 117, 151, 0.9)); }
+    }
+    @keyframes bloomPulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(255, 42, 117, 0.6)); }
+      50% { transform: scale(1.03); filter: drop-shadow(0 0 16px rgba(255, 42, 117, 0.95)); }
+    }
+
     .section-title {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-weight: 700;
@@ -42,8 +51,8 @@
     }
     .section-subtitle {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 500;
-      font-size: 12px;
+      font-weight: 600;
+      font-size: 11.5px;
       fill: #ff8fae;
       text-anchor: middle;
       letter-spacing: 1.5px;
@@ -54,69 +63,76 @@
       font-size: 13px;
       fill: #e6ebf5;
     }
-    .skill-percent {
+    .skill-level {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-weight: 700;
-      font-size: 12px;
+      font-size: 11.5px;
       fill: #ff7597;
       text-anchor: end;
+    }
+    .animated-bars {
+      animation: barGlow 3s infinite ease-in-out;
+    }
+    .animated-bloom {
+      animation: bloomPulse 4s infinite ease-in-out;
+      transform-origin: 425px 190px;
     }
   </style>
 
   <!-- Container Box -->
-  <rect x="2" y="2" width="846" height="336" rx="20" fill="url(#skillsBg)" stroke="url(#borderGradSkills)" stroke-width="1.5" />
+  <rect x="2" y="2" width="846" height="356" rx="20" fill="url(#skillsBg)" stroke="url(#borderGradSkills)" stroke-width="1.5" />
 
-  <!-- Ambient Pink Glow -->
-  <circle cx="425" cy="180" r="90" fill="#ff2a75" fill-opacity="0.12" filter="blur(25px)" />
+  <!-- Ambient Glow -->
+  <circle cx="425" cy="190" r="100" fill="#ff2a75" fill-opacity="0.1" filter="blur(30px)" />
 
   <!-- Title & Subtitle -->
-  <text x="425" y="44" class="section-title">🌸 My Skills &amp; Proficiencies 🌸</text>
-  <text x="425" y="66" class="section-subtitle">— TECHNOLOGIES I WORK WITH —</text>
+  <text x="425" y="42" class="section-title">🌸 Technical Proficiencies &amp; Stack 🌸</text>
+  <text x="425" y="64" class="section-subtitle">— HARDWARE ARCHITECTURE &bull; EMBEDDED &bull; SOFTWARE —</text>
 
-  <!-- ================= LEFT COLUMN ================= -->
-  <!-- Skill 1: React.js & Next.js -->
-  <g transform="translate(45, 95)">
-    <rect x="0" y="0" width="315" height="54" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">React.js / Next.js</text>
-    <text x="299" y="24" class="skill-percent">95%</text>
-    <rect x="16" y="34" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="34" width="268" height="6" rx="3" fill="url(#barGrad)" filter="url(#sakuraGlowSkills)" />
+  <!-- ================= LEFT COLUMN: HARDWARE & VLSI ================= -->
+  <!-- Skill 1: VLSI & Verilog -->
+  <g transform="translate(45, 90)">
+    <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+    <text x="16" y="24" class="skill-title">VLSI &amp; Digital Design (Verilog)</text>
+    <text x="299" y="24" class="skill-level">Core Focus</text>
+    <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
+    <rect x="16" y="36" width="245" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
-  <!-- Skill 2: JavaScript / TypeScript -->
+  <!-- Skill 2: Embedded Systems & IoT -->
   <g transform="translate(45, 165)">
-    <rect x="0" y="0" width="315" height="54" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">JavaScript / TypeScript</text>
-    <text x="299" y="24" class="skill-percent">90%</text>
-    <rect x="16" y="34" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="34" width="255" height="6" rx="3" fill="url(#barGrad)" filter="url(#sakuraGlowSkills)" />
+    <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+    <text x="16" y="24" class="skill-title">Embedded Systems &amp; IoT (LoRa)</text>
+    <text x="299" y="24" class="skill-level">Intermediate</text>
+    <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
+    <rect x="16" y="36" width="230" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
-  <!-- Skill 3: Tailwind CSS & UI Design -->
-  <g transform="translate(45, 235)">
-    <rect x="0" y="0" width="315" height="54" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">Tailwind CSS &amp; UI Design</text>
-    <text x="299" y="24" class="skill-percent">92%</text>
-    <rect x="16" y="34" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="34" width="260" height="6" rx="3" fill="url(#barGrad)" filter="url(#sakuraGlowSkills)" />
+  <!-- Skill 3: MATLAB & Simulink -->
+  <g transform="translate(45, 240)">
+    <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+    <text x="16" y="24" class="skill-title">MATLAB &amp; Simulink (Control/PID)</text>
+    <text x="299" y="24" class="skill-level">Advanced</text>
+    <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
+    <rect x="16" y="36" width="260" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
-  <!-- ================= CENTER SAKURA BRANCH ================= -->
-  <g transform="translate(425, 205)" filter="url(#sakuraGlowSkills)">
+  <!-- ================= CENTER SAKURA BLOOM ================= -->
+  <g transform="translate(425, 210)" class="animated-bloom">
     <!-- Branch Stem -->
-    <path d="M 0 65 Q -3 20 2 -15 T -5 -75 Q -3 -88 0 -95" stroke="#451221" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 0 75 Q -3 25 2 -15 T -5 -75 Q -3 -88 0 -95" stroke="#451221" stroke-width="3" stroke-linecap="round" fill="none" />
     <path d="M 0 15 Q -18 0 -28 5" stroke="#451221" stroke-width="2" stroke-linecap="round" fill="none" />
     <path d="M 1 -25 Q 22 -40 32 -33" stroke="#451221" stroke-width="2" stroke-linecap="round" fill="none" />
     <path d="M -3 -55 Q -16 -65 -22 -62" stroke="#451221" stroke-width="1.8" stroke-linecap="round" fill="none" />
 
     <!-- Top Blossom -->
-    <g transform="translate(0, -96) scale(0.85)">
-      <circle cx="-6" cy="-4" r="6" fill="#ff7597" />
-      <circle cx="6" cy="-4" r="6" fill="#ff7597" />
-      <circle cx="-7" cy="5" r="6" fill="#ff4d8d" />
-      <circle cx="7" cy="5" r="6" fill="#ff4d8d" />
-      <circle cx="0" cy="8" r="6" fill="#ff2a75" />
-      <circle cx="0" cy="2" r="2.5" fill="#fff" />
+    <g transform="translate(0, -96) scale(0.9)">
+      <circle cx="-6" cy="-4" r="6.5" fill="#ff7597" />
+      <circle cx="6" cy="-4" r="6.5" fill="#ff7597" />
+      <circle cx="-7" cy="5" r="6.5" fill="#ff4d8d" />
+      <circle cx="7" cy="5" r="6.5" fill="#ff4d8d" />
+      <circle cx="0" cy="8" r="6.5" fill="#ff2a75" />
+      <circle cx="0" cy="2" r="2.8" fill="#fff" />
     </g>
 
     <!-- Branch Blossom Left -->
@@ -138,43 +154,33 @@
       <circle cx="0" cy="10" r="7" fill="#ff2a75" />
       <circle cx="0" cy="3" r="3.2" fill="#fff" />
     </g>
-
-    <!-- Branch Blossom Small Upper Left -->
-    <g transform="translate(-22, -62) scale(0.7)">
-      <circle cx="-5" cy="-3" r="5" fill="#ff7597" />
-      <circle cx="5" cy="-3" r="5" fill="#ff7597" />
-      <circle cx="-6" cy="4" r="5" fill="#ff4d8d" />
-      <circle cx="6" cy="4" r="5" fill="#ff4d8d" />
-      <circle cx="0" cy="6" r="5" fill="#ff2a75" />
-      <circle cx="0" cy="1.5" r="2" fill="#fff" />
-    </g>
   </g>
 
-  <!-- ================= RIGHT COLUMN ================= -->
-  <!-- Skill 4: Node.js & Express -->
-  <g transform="translate(490, 95)">
-    <rect x="0" y="0" width="315" height="54" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">Node.js &amp; Express</text>
-    <text x="299" y="24" class="skill-percent">88%</text>
-    <rect x="16" y="34" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="34" width="249" height="6" rx="3" fill="url(#barGrad)" filter="url(#sakuraGlowSkills)" />
+  <!-- ================= RIGHT COLUMN: SOFTWARE & PROGRAMMING ================= -->
+  <!-- Skill 4: C / C++ & Python -->
+  <g transform="translate(490, 90)">
+    <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+    <text x="16" y="24" class="skill-title">C, C++ &amp; Python</text>
+    <text x="299" y="24" class="skill-level">Intermediate</text>
+    <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
+    <rect x="16" y="36" width="220" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
-  <!-- Skill 5: Databases (MongoDB / SQL) -->
+  <!-- Skill 5: Web Development -->
   <g transform="translate(490, 165)">
-    <rect x="0" y="0" width="315" height="54" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">MongoDB &amp; Databases</text>
-    <text x="299" y="24" class="skill-percent">84%</text>
-    <rect x="16" y="34" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="34" width="237" height="6" rx="3" fill="url(#barGrad)" filter="url(#sakuraGlowSkills)" />
+    <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+    <text x="16" y="24" class="skill-title">Frontend Dev (React / JavaScript)</text>
+    <text x="299" y="24" class="skill-level">Active Hobby</text>
+    <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
+    <rect x="16" y="36" width="200" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
-  <!-- Skill 6: Git, GitHub & DevOps -->
-  <g transform="translate(490, 235)">
-    <rect x="0" y="0" width="315" height="54" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">Git &amp; GitHub Architecture</text>
-    <text x="299" y="24" class="skill-percent">94%</text>
-    <rect x="16" y="34" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="34" width="266" height="6" rx="3" fill="url(#barGrad)" filter="url(#sakuraGlowSkills)" />
+  <!-- Skill 6: Microcontrollers & Sensors -->
+  <g transform="translate(490, 240)">
+    <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+    <text x="16" y="24" class="skill-title">Microcontrollers &amp; Sensors</text>
+    <text x="299" y="24" class="skill-level">Intermediate</text>
+    <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
+    <rect x="16" y="36" width="235" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 </svg>

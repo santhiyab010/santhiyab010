@@ -1,15 +1,15 @@
-<svg viewBox="0 0 850 300" width="100%" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 850 310" width="100%" height="310" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="eduBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0c13" />
-      <stop offset="50%" stop-color="#12131d" />
-      <stop offset="100%" stop-color="#190e1b" />
+      <stop offset="0%" stop-color="#07080d" />
+      <stop offset="50%" stop-color="#0f111a" />
+      <stop offset="100%" stop-color="#180b18" />
     </linearGradient>
 
     <linearGradient id="eduBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.3" />
+      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.35" />
       <stop offset="50%" stop-color="#ff2a75" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.4" />
     </linearGradient>
 
     <linearGradient id="tagPinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -28,86 +28,96 @@
     }
     .item-title {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 600;
-      font-size: 14px;
+      font-weight: 700;
+      font-size: 13.5px;
       fill: #ffdce6;
     }
     .item-sub {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 11.5px;
+      font-size: 11px;
       fill: #8c97a8;
     }
     .badge-txt {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 700;
       fill: #ffffff;
+      text-anchor: middle;
     }
   </style>
 
   <!-- Container Box -->
-  <rect x="2" y="2" width="846" height="296" rx="20" fill="url(#eduBg)" stroke="url(#eduBorder)" stroke-width="1.5" />
+  <rect x="2" y="2" width="846" height="306" rx="20" fill="url(#eduBg)" stroke="url(#eduBorder)" stroke-width="1.5" />
 
-  <!-- LEFT: Certificates & Achievements -->
+  <!-- LEFT: Education Journey -->
   <g transform="translate(45, 30)">
-    <text x="0" y="0" class="edu-title">🌸 Certifications &amp; Badges</text>
+    <text x="0" y="0" class="edu-title">🌸 Academic Background</text>
 
-    <!-- Cert Item 1 -->
+    <!-- College -->
     <g transform="translate(0, 22)">
-      <rect x="0" y="0" width="355" height="60" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-      <text x="16" y="25" class="item-title">Full-Stack Web Development</text>
-      <text x="16" y="44" class="item-sub">Frontend Architecture &amp; RESTful APIs</text>
-      <rect x="295" y="16" width="46" height="20" rx="5" fill="url(#tagPinkGrad)" />
-      <text x="306" y="30" class="badge-txt">VERIFIED</text>
+      <rect x="0" y="0" width="355" height="70" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="24" class="item-title">B.Tech Electronics &amp; Communication</text>
+      <text x="16" y="42" class="item-sub">Kalasalingam Academy of Research and Education</text>
+      <text x="16" y="58" class="item-sub" fill="#ff7597">✦ 3rd Semester &bull; CGPA: 9.23</text>
+      <rect x="290" y="14" width="52" height="20" rx="5" fill="url(#tagPinkGrad)" />
+      <text x="316" y="28" class="badge-txt">9.23 CGPA</text>
     </g>
 
-    <!-- Cert Item 2 -->
-    <g transform="translate(0, 94)">
-      <rect x="0" y="0" width="355" height="60" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-      <text x="16" y="25" class="item-title">Modern JavaScript (ES6+) &amp; React</text>
-      <text x="16" y="44" class="item-sub">Component Design &amp; State Management</text>
-      <rect x="295" y="16" width="46" height="20" rx="5" fill="url(#tagPinkGrad)" />
-      <text x="306" y="30" class="badge-txt">VERIFIED</text>
+    <!-- School -->
+    <g transform="translate(0, 104)">
+      <rect x="0" y="0" width="355" height="66" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="24" class="item-title">Higher Secondary Education</text>
+      <text x="16" y="42" class="item-sub">Sri Matha Matric Higher Secondary School</text>
+      <text x="16" y="58" class="item-sub" fill="#ff7597">✦ Academic Performance: 90.16%</text>
+      <rect x="290" y="14" width="52" height="20" rx="5" fill="url(#tagPinkGrad)" />
+      <text x="316" y="28" class="badge-txt">90.16%</text>
     </g>
 
-    <!-- Cert Item 3 -->
-    <g transform="translate(0, 166)">
-      <rect x="0" y="0" width="355" height="60" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-      <text x="16" y="25" class="item-title">UI/UX Design &amp; Responsive Layouts</text>
-      <text x="16" y="44" class="item-sub">Figma to Code &amp; Modern Styling</text>
-      <rect x="295" y="16" width="46" height="20" rx="5" fill="url(#tagPinkGrad)" />
-      <text x="306" y="30" class="badge-txt">VERIFIED</text>
+    <!-- Current Status Pill -->
+    <g transform="translate(0, 182)">
+      <rect x="0" y="0" width="355" height="42" rx="8" fill="#ff2a75" fill-opacity="0.08" stroke="#ff7597" stroke-opacity="0.25" stroke-width="1" />
+      <text x="14" y="26" font-family="-apple-system, sans-serif" font-size="11" fill="#ffaec5">💡 Exploring VLSI Frontend, Digital Design &amp; Web Systems</text>
     </g>
   </g>
 
   <!-- Vertical Divider Line -->
-  <line x1="425" y1="35" x2="425" y2="265" stroke="#ff7597" stroke-opacity="0.2" stroke-dasharray="4 4" />
+  <line x1="425" y1="35" x2="425" y2="275" stroke="#ff7597" stroke-opacity="0.2" stroke-dasharray="4 4" />
 
-  <!-- RIGHT: Education & Journey -->
+  <!-- RIGHT: Key Engineering Projects & Hardware Builds -->
   <g transform="translate(450, 30)">
-    <text x="0" y="0" class="edu-title">🌸 Education &amp; Background</text>
+    <text x="0" y="0" class="edu-title">🌸 Featured Hardware &amp; IoT Builds</text>
 
-    <!-- Edu Item 1 -->
+    <!-- Project 1 -->
     <g transform="translate(0, 22)">
-      <rect x="0" y="0" width="355" height="68" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-      <text x="16" y="26" class="item-title">Bachelor's Degree in Computer Science / IT</text>
-      <text x="16" y="45" class="item-sub">Software Engineering, Data Structures &amp; Web Tech</text>
-      <text x="16" y="60" class="item-sub" fill="#ff7597">✦ Academic Journey &amp; Projects</text>
+      <rect x="0" y="0" width="355" height="52" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="22" class="item-title">SOS Watch (LoRa Emergency Comm.)</text>
+      <text x="16" y="40" class="item-sub">Off-grid long range alerts without mobile network</text>
+      <rect x="285" y="12" width="56" height="18" rx="4" fill="url(#tagPinkGrad)" />
+      <text x="313" y="25" class="badge-txt">EMBEDDED</text>
     </g>
 
-    <!-- Edu Item 2 -->
-    <g transform="translate(0, 102)">
-      <rect x="0" y="0" width="355" height="68" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
-      <text x="16" y="26" class="item-title">Advanced Web Development Immersive</text>
-      <text x="16" y="45" class="item-sub">Full Stack Engineering, Production Deployments</text>
-      <text x="16" y="60" class="item-sub" fill="#ff7597">✦ Modern Tech Stack Specialization</text>
+    <!-- Project 2 -->
+    <g transform="translate(0, 84)">
+      <rect x="0" y="0" width="355" height="52" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="22" class="item-title">Real-Time Patient Health Monitor</text>
+      <text x="16" y="40" class="item-sub">IoT sensor integration &amp; continuous telemetry</text>
+      <rect x="285" y="12" width="56" height="18" rx="4" fill="url(#tagPinkGrad)" />
+      <text x="313" y="25" class="badge-txt">IoT DASH</text>
     </g>
 
-    <!-- Small philosophy / note -->
-    <g transform="translate(0, 182)">
-      <rect x="0" y="0" width="355" height="44" rx="8" fill="#ff2a75" fill-opacity="0.08" stroke="#ff7597" stroke-opacity="0.2" stroke-width="1" />
-      <text x="14" y="27" font-family="-apple-system, sans-serif" font-size="11.5" fill="#ffaec5">💡 Lifelong learner committed to exploring next-gen tech</text>
+    <!-- Project 3 -->
+    <g transform="translate(0, 146)">
+      <rect x="0" y="0" width="355" height="52" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="22" class="item-title">PMSM Adaptive PID Auto-Tuner</text>
+      <text x="16" y="40" class="item-sub">MATLAB &amp; Simulink control-system optimization</text>
+      <rect x="285" y="12" width="56" height="18" rx="4" fill="url(#tagPinkGrad)" />
+      <text x="313" y="25" class="badge-txt">SIMULINK</text>
+    </g>
+
+    <!-- Project 4 small -->
+    <g transform="translate(0, 208)">
+      <rect x="0" y="0" width="355" height="34" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#ff7597" stroke-opacity="0.12" stroke-width="1" />
+      <text x="14" y="22" class="item-sub" fill="#ffdce6">📦 Smart Warehouse Package Counting (-80% manual effort)</text>
     </g>
   </g>
 </svg>
-
