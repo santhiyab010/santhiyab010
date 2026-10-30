@@ -88,7 +88,7 @@
 
   <!-- Title & Subtitle -->
   <text x="425" y="40" class="section-title">🌸 Technical Proficiencies &amp; Skills 🌸</text>
-  <text x="425" y="60" class="section-subtitle">// HARDWARE ARCHITECTURE &bull; EMBEDDED SYSTEMS &bull; SOFTWARE //</text>
+  <text x="425" y="60" class="section-subtitle">// HARDWARE ARCHITECTURE &#8226; EMBEDDED SYSTEMS &#8226; SOFTWARE //</text>
 
   <!-- ================= LEFT COLUMN: HARDWARE & VLSI ================= -->
   <!-- Skill 1: VLSI & Digital Logic -->

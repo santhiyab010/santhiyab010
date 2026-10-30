@@ -63,7 +63,7 @@
 
   <!-- Title & Subtitle -->
   <text x="425" y="38" class="proj-head">🌸 Featured Engineering Builds 🌸</text>
-  <text x="425" y="58" class="proj-sub">// HARDWARE PROTOTYPES &bull; IOT SYSTEMS &bull; CONTROL //</text>
+  <text x="425" y="58" class="proj-sub">// HARDWARE PROTOTYPES &#8226; IOT SYSTEMS &#8226; CONTROL //</text>
 
   <!-- ================= 2x2 PROJECT CARDS GRID ================= -->
   <!-- Project 1: SOS WATCH -->
@@ -130,3 +130,4 @@
     </g>
   </g>
 </svg>
+

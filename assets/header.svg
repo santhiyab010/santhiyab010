@@ -255,7 +255,7 @@
   <g transform="translate(45, 274)">
     <!-- Pill 1: Degree & CGPA -->
     <rect x="0" y="0" width="180" height="30" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
-    <text x="14" y="19" class="pill-text">🎓 B.Tech ECE &bull; <tspan fill="#ff7597" font-weight="700">9.23 CGPA</tspan></text>
+    <text x="14" y="19" class="pill-text">🎓 B.Tech ECE &#8226; <tspan fill="#ff7597" font-weight="700">9.23 CGPA</tspan></text>
 
     <!-- Pill 2: Portfolio Link -->
     <rect x="192" y="0" width="185" height="30" rx="8" fill="#ff2a75" fill-opacity="0.12" stroke="#ff7597" stroke-opacity="0.4" stroke-width="1" />

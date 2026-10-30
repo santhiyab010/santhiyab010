@@ -97,7 +97,7 @@
       <g transform="translate(0, 0)">
         <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
         <text x="14" y="25" class="stat-val">9.23</text>
-        <text x="14" y="44" class="stat-lbl">CGPA &bull; B.Tech ECE (3rd Sem)</text>
+        <text x="14" y="44" class="stat-lbl">CGPA &#8226; B.Tech ECE (3rd Sem)</text>
       </g>
       
       <!-- Stat 2: High School -->

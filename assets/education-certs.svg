@@ -58,7 +58,7 @@
       <rect x="0" y="0" width="355" height="74" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
       <text x="16" y="24" class="item-title">B.Tech Electronics &amp; Communication</text>
       <text x="16" y="44" class="item-sub">Kalasalingam Academy of Research and Education</text>
-      <text x="16" y="62" class="item-sub" fill="#ff7597">✦ 3rd Semester &bull; CGPA: 9.23</text>
+      <text x="16" y="62" class="item-sub" fill="#ff7597">✦ 3rd Semester &#8226; CGPA: 9.23</text>
       <rect x="286" y="14" width="56" height="20" rx="5" fill="url(#tagPinkGrad)" />
       <text x="314" y="28" class="badge-txt">9.23 CGPA</text>
     </g>
