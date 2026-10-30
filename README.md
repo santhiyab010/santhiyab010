@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- ANIMATED HEADER CARD (WITH TOP-TO-BOTTOM FALLING PETALS & SAKURA FAN) -->
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/header.svg" width="100%" alt="Hi, I'm Santhiya B" />
+  <img src="assets/header.svg?v=3" width="100%" alt="Hi, I'm Santhiya B" />
 
   <br/><br/>
 
@@ -20,52 +20,52 @@
     </a>
   </p>
 
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/divider.svg" width="100%" alt="Divider" />
+  <img src="assets/divider.svg?v=3" width="100%" alt="Divider" />
 
 </div>
 
 <!-- ABOUT ME SECTION -->
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/about.svg" width="100%" alt="About Me" />
+  <img src="assets/about.svg?v=3" width="100%" alt="About Me" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/divider.svg" width="100%" alt="Divider" />
+  <img src="assets/divider.svg?v=3" width="100%" alt="Divider" />
 </div>
 
 <!-- TECHNICAL PROFICIENCIES & SKILLS DATABASE -->
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/skills.svg" width="100%" alt="Technical Skills" />
+  <img src="assets/skills.svg?v=3" width="100%" alt="Technical Skills" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/divider.svg" width="100%" alt="Divider" />
+  <img src="assets/divider.svg?v=3" width="100%" alt="Divider" />
 </div>
 
 <!-- FEATURED ENGINEERING BUILDS -->
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/projects.svg" width="100%" alt="Featured Projects" />
+  <img src="assets/projects.svg?v=3" width="100%" alt="Featured Projects" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/divider.svg" width="100%" alt="Divider" />
+  <img src="assets/divider.svg?v=3" width="100%" alt="Divider" />
 </div>
 
 <!-- ACADEMIC BACKGROUND -->
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/education-certs.svg" width="100%" alt="Academic Background" />
+  <img src="assets/education-certs.svg?v=3" width="100%" alt="Academic Background" />
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/santhiyab010/santhiyab010@main/assets/divider.svg" width="100%" alt="Divider" />
+  <img src="assets/divider.svg?v=3" width="100%" alt="Divider" />
 </div>
 
 <!-- CONTACT & GET IN TOUCH -->
