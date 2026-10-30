@@ -1,9 +1,9 @@
-<svg viewBox="0 0 850 330" width="100%" height="330" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 850 340" width="100%" height="340" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07080d" />
-      <stop offset="55%" stop-color="#0f111a" />
-      <stop offset="100%" stop-color="#180b18" />
+      <stop offset="0%" stop-color="#06070c" />
+      <stop offset="55%" stop-color="#0e1019" />
+      <stop offset="100%" stop-color="#190a18" />
     </linearGradient>
 
     <linearGradient id="aboutBorder" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -47,7 +47,7 @@
     }
     .about-body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 13px;
+      font-size: 12.8px;
       fill: #aeb8c7;
     }
     .stat-val {
@@ -65,84 +65,84 @@
     }
     .card-title {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       fill: #ffdbe6;
     }
     .card-desc {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 12px;
+      font-size: 11.8px;
       fill: #9aa5b5;
     }
   </style>
 
   <!-- Container Box -->
-  <rect x="2" y="2" width="846" height="326" rx="20" fill="url(#aboutBg)" stroke="url(#aboutBorder)" stroke-width="1.5" />
+  <rect x="2" y="2" width="846" height="336" rx="20" fill="url(#aboutBg)" stroke="url(#aboutBorder)" stroke-width="1.5" />
 
   <!-- Ambient Glow -->
   <circle cx="720" cy="160" r="110" fill="#ff2a75" fill-opacity="0.1" filter="blur(30px)" />
 
   <!-- LEFT COLUMN -->
-  <g transform="translate(45, 36)">
-    <text x="0" y="0" class="about-tag">DISCOVER MY JOURNEY</text>
-    <text x="0" y="32" class="about-head">🌸 About Me 🌸</text>
+  <g transform="translate(45, 34)">
+    <text x="0" y="0" class="about-tag">01. ABOUT_ME // SANTHIYA.EXE</text>
+    <text x="0" y="30" class="about-head">🌸 About Me 🌸</text>
     
-    <text x="0" y="66" class="about-body">I'm Santhiya B, a 3rd-semester B.Tech Electronics &amp; Communication</text>
-    <text x="0" y="86" class="about-body">Engineering student. My primary focus is VLSI &amp; Digital Frontend Design,</text>
-    <text x="0" y="106" class="about-body">combined with a passionate hobby for Embedded Systems, IoT &amp; Full-Stack.</text>
+    <text x="0" y="62" class="about-body">I'm Santhiya B, a 3rd-semester B.Tech ECE student deeply passionate about</text>
+    <text x="0" y="82" class="about-body">understanding how hardware and software fuse to create real-world scalable</text>
+    <text x="0" y="102" class="about-body">systems. My primary field is VLSI, paired with Full-Stack &amp; Embedded IoT.</text>
 
     <!-- 4 Stats Boxes Grid -->
-    <g transform="translate(0, 130)">
+    <g transform="translate(0, 126)">
       <!-- Stat 1: CGPA -->
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+        <rect x="0" y="0" width="185" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
         <text x="14" y="26" class="stat-val">9.23</text>
-        <text x="14" y="44" class="stat-lbl">Academic CGPA (B.Tech ECE)</text>
+        <text x="14" y="45" class="stat-lbl">CGPA &bull; B.Tech ECE (3rd Sem)</text>
       </g>
       
       <!-- Stat 2: Projects -->
       <g transform="translate(200, 0)">
-        <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-        <text x="14" y="26" class="stat-val">4+ Key</text>
-        <text x="14" y="44" class="stat-lbl">Hardware &amp; IoT Prototypes</text>
+        <rect x="0" y="0" width="185" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+        <text x="14" y="26" class="stat-val">4 Core</text>
+        <text x="14" y="45" class="stat-lbl">Hardware &amp; IoT Builds</text>
       </g>
 
       <!-- Stat 3: Primary Core -->
-      <g transform="translate(0, 66)">
-        <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <g transform="translate(0, 70)">
+        <rect x="0" y="0" width="185" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
         <text x="14" y="26" class="stat-val">VLSI &amp; RTL</text>
-        <text x="14" y="44" class="stat-lbl">Frontend Digital Focus</text>
+        <text x="14" y="45" class="stat-lbl">Primary: Verilog &amp; Digital</text>
       </g>
 
       <!-- Stat 4: Engineering Hobby -->
-      <g transform="translate(200, 66)">
-        <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-        <text x="14" y="26" class="stat-val">Embedded</text>
-        <text x="14" y="44" class="stat-lbl">&amp; Full-Stack Developer</text>
+      <g transform="translate(200, 70)">
+        <rect x="0" y="0" width="185" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+        <text x="14" y="26" class="stat-val">Full-Stack</text>
+        <text x="14" y="45" class="stat-lbl">&amp; Embedded IoT Hobby</text>
       </g>
     </g>
   </g>
 
-  <!-- RIGHT COLUMN: Philosophy & Mission Cards -->
-  <g transform="translate(485, 45)">
-    <!-- Philosophy Card -->
+  <!-- RIGHT COLUMN: Target Sectors Cards (From Portfolio) -->
+  <g transform="translate(485, 42)">
+    <!-- Sector 1: VLSI Primary -->
     <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="320" height="110" rx="12" fill="#ffffff" fill-opacity="0.025" stroke="#ff7597" stroke-opacity="0.15" stroke-width="1" />
-      <rect x="0" y="0" width="4" height="110" rx="2" fill="url(#accentLineGrad)" />
-      <text x="20" y="30" class="card-title">✦ Hardware-Software Synergy</text>
-      <text x="20" y="55" class="card-desc">Bridging the gap between silicon architecture</text>
-      <text x="20" y="74" class="card-desc">and software engineering. Understanding how logic</text>
-      <text x="20" y="93" class="card-desc">flows from silicon gates to interactive UIs.</text>
+      <rect x="0" y="0" width="320" height="116" rx="12" fill="#ffffff" fill-opacity="0.025" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <rect x="0" y="0" width="4" height="116" rx="2" fill="url(#accentLineGrad)" />
+      <text x="18" y="28" class="card-title">✦ PRIMARY: VLSI &amp; DIGITAL DESIGN</text>
+      <text x="18" y="52" class="card-desc">Exploring VLSI, digital logic, Verilog HDL,</text>
+      <text x="18" y="70" class="card-desc">semiconductor fundamentals, and hardware</text>
+      <text x="18" y="88" class="card-desc">architectures to build robust silicon systems.</text>
     </g>
 
-    <!-- Mission Card -->
-    <g transform="translate(0, 130)">
-      <rect x="0" y="0" width="320" height="110" rx="12" fill="#ffffff" fill-opacity="0.025" stroke="#ff7597" stroke-opacity="0.15" stroke-width="1" />
-      <rect x="0" y="0" width="4" height="110" rx="2" fill="url(#accentLineGrad)" />
-      <text x="20" y="30" class="card-title">✦ The Vision</text>
-      <text x="20" y="55" class="card-desc">Advancing semiconductor innovations, robust RTL</text>
-      <text x="20" y="74" class="card-desc">designs, and resilient embedded IoT ecosystems</text>
-      <text x="20" y="93" class="card-desc">that solve real-world emergency challenges.</text>
+    <!-- Sector 2: Full-Stack Secondary -->
+    <g transform="translate(0, 134)">
+      <rect x="0" y="0" width="320" height="116" rx="12" fill="#ffffff" fill-opacity="0.025" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <rect x="0" y="0" width="4" height="116" rx="2" fill="url(#accentLineGrad)" />
+      <text x="18" y="28" class="card-title">✦ SECONDARY: FULL-STACK &amp; IoT</text>
+      <text x="18" y="52" class="card-desc">Building responsive web apps alongside embedded</text>
+      <text x="18" y="70" class="card-desc">IoT systems, understanding how complete end-to-end</text>
+      <text x="18" y="88" class="card-desc">software &amp; hardware platforms communicate.</text>
     </g>
   </g>
 </svg>

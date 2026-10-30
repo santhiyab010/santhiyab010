@@ -2,9 +2,9 @@
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="skillsBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07080d" />
-      <stop offset="60%" stop-color="#0f111a" />
-      <stop offset="100%" stop-color="#180b18" />
+      <stop offset="0%" stop-color="#06070c" />
+      <stop offset="60%" stop-color="#0e1019" />
+      <stop offset="100%" stop-color="#190a18" />
     </linearGradient>
 
     <!-- Border Gradient -->
@@ -19,6 +19,12 @@
       <stop offset="0%" stop-color="#ff2a75" />
       <stop offset="70%" stop-color="#ff7597" />
       <stop offset="100%" stop-color="#ffaec5" />
+    </linearGradient>
+
+    <!-- Tag Gradient -->
+    <linearGradient id="tagExpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2a75" />
+      <stop offset="100%" stop-color="#ff7597" />
     </linearGradient>
 
     <!-- Glow Filter -->
@@ -50,7 +56,7 @@
       letter-spacing: 0.5px;
     }
     .section-subtitle {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Consolas', monospace;
       font-weight: 600;
       font-size: 11.5px;
       fill: #ff8fae;
@@ -63,12 +69,13 @@
       font-size: 13px;
       fill: #e6ebf5;
     }
-    .skill-level {
+    .tag-txt {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-weight: 700;
-      font-size: 11.5px;
-      fill: #ff7597;
-      text-anchor: end;
+      font-size: 9.5px;
+      fill: #ffffff;
+      text-anchor: middle;
+      letter-spacing: 0.3px;
     }
     .animated-bars {
       animation: barGlow 3s infinite ease-in-out;
@@ -86,35 +93,38 @@
   <circle cx="425" cy="190" r="100" fill="#ff2a75" fill-opacity="0.1" filter="blur(30px)" />
 
   <!-- Title & Subtitle -->
-  <text x="425" y="42" class="section-title">🌸 Technical Proficiencies &amp; Stack 🌸</text>
-  <text x="425" y="64" class="section-subtitle">— HARDWARE ARCHITECTURE &bull; EMBEDDED &bull; SOFTWARE —</text>
+  <text x="425" y="42" class="section-title">🌸 SKILLS_DATABASE 🌸</text>
+  <text x="425" y="64" class="section-subtitle">// HARDWARE ARCHITECTURE &bull; EMBEDDED &bull; SOFTWARE //</text>
 
   <!-- ================= LEFT COLUMN: HARDWARE & VLSI ================= -->
-  <!-- Skill 1: VLSI & Verilog -->
+  <!-- Skill 1: VLSI & Digital Design (Verilog) -->
   <g transform="translate(45, 90)">
     <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">VLSI &amp; Digital Design (Verilog)</text>
-    <text x="299" y="24" class="skill-level">Core Focus</text>
+    <text x="16" y="24" class="skill-title">VLSI &amp; Verilog HDL</text>
+    <rect x="220" y="11" width="82" height="18" rx="4" fill="url(#tagExpGrad)" />
+    <text x="261" y="24" class="tag-txt">EXPLORING</text>
     <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="36" width="245" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
+    <rect x="16" y="36" width="235" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
   <!-- Skill 2: Embedded Systems & IoT -->
   <g transform="translate(45, 165)">
     <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">Embedded Systems &amp; IoT (LoRa)</text>
-    <text x="299" y="24" class="skill-level">Intermediate</text>
+    <text x="16" y="24" class="skill-title">IoT &amp; Microcontrollers</text>
+    <rect x="202" y="11" width="100" height="18" rx="4" fill="url(#tagExpGrad)" />
+    <text x="252" y="24" class="tag-txt">PROJECT EXP</text>
     <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="36" width="230" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
+    <rect x="16" y="36" width="260" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
   <!-- Skill 3: MATLAB & Simulink -->
   <g transform="translate(45, 240)">
     <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">MATLAB &amp; Simulink (Control/PID)</text>
-    <text x="299" y="24" class="skill-level">Advanced</text>
+    <text x="16" y="24" class="skill-title">MATLAB / Simulink</text>
+    <rect x="202" y="11" width="100" height="18" rx="4" fill="url(#tagExpGrad)" />
+    <text x="252" y="24" class="tag-txt">PROJECT EXP</text>
     <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="36" width="260" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
+    <rect x="16" y="36" width="265" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
   <!-- ================= CENTER SAKURA BLOOM ================= -->
@@ -157,30 +167,33 @@
   </g>
 
   <!-- ================= RIGHT COLUMN: SOFTWARE & PROGRAMMING ================= -->
-  <!-- Skill 4: C / C++ & Python -->
+  <!-- Skill 4: C & Python -->
   <g transform="translate(490, 90)">
     <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">C, C++ &amp; Python</text>
-    <text x="299" y="24" class="skill-level">Intermediate</text>
+    <text x="16" y="24" class="skill-title">C &amp; Python Programming</text>
+    <rect x="202" y="11" width="100" height="18" rx="4" fill="url(#tagExpGrad)" />
+    <text x="252" y="24" class="tag-txt">PROJECT EXP</text>
     <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="36" width="220" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
+    <rect x="16" y="36" width="250" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
-  <!-- Skill 5: Web Development -->
+  <!-- Skill 5: C++ -->
   <g transform="translate(490, 165)">
     <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">Frontend Dev (React / JavaScript)</text>
-    <text x="299" y="24" class="skill-level">Active Hobby</text>
+    <text x="16" y="24" class="skill-title">C++ (OOP &amp; Logic)</text>
+    <rect x="225" y="11" width="77" height="18" rx="4" fill="url(#tagExpGrad)" />
+    <text x="263.5" y="24" class="tag-txt">LEARNING</text>
     <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="36" width="200" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
+    <rect x="16" y="36" width="190" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 
-  <!-- Skill 6: Microcontrollers & Sensors -->
+  <!-- Skill 6: Frontend Web Dev -->
   <g transform="translate(490, 240)">
     <rect x="0" y="0" width="315" height="58" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-    <text x="16" y="24" class="skill-title">Microcontrollers &amp; Sensors</text>
-    <text x="299" y="24" class="skill-level">Intermediate</text>
+    <text x="16" y="24" class="skill-title">Frontend Web Development</text>
+    <rect x="225" y="11" width="77" height="18" rx="4" fill="url(#tagExpGrad)" />
+    <text x="263.5" y="24" class="tag-txt">LEARNING</text>
     <rect x="16" y="36" width="283" height="6" rx="3" fill="#ffffff" fill-opacity="0.08" />
-    <rect x="16" y="36" width="235" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
+    <rect x="16" y="36" width="205" height="6" rx="3" fill="url(#barGrad)" class="animated-bars" />
   </g>
 </svg>

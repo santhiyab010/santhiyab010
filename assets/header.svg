@@ -1,10 +1,10 @@
-<svg viewBox="0 0 850 300" width="100%" height="300" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 850 310" width="100%" height="310" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07080d" />
-      <stop offset="50%" stop-color="#0f111a" />
-      <stop offset="100%" stop-color="#180b18" />
+      <stop offset="0%" stop-color="#06070c" />
+      <stop offset="50%" stop-color="#0e1019" />
+      <stop offset="100%" stop-color="#190a18" />
     </linearGradient>
 
     <!-- Sakura Pink Gradient -->
@@ -12,12 +12,6 @@
       <stop offset="0%" stop-color="#ff2a75" />
       <stop offset="50%" stop-color="#ff7597" />
       <stop offset="100%" stop-color="#ffaec5" />
-    </linearGradient>
-
-    <!-- Chip / Circuit Glow Gradient -->
-    <linearGradient id="circuitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff2a75" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.2" />
     </linearGradient>
 
     <!-- Fan Body Gradient -->
@@ -60,21 +54,21 @@
     }
     @keyframes floatPetal1 {
       0% { transform: translate(0px, 0px) rotate(0deg); opacity: 0; }
-      20% { opacity: 0.9; }
+      20% { opacity: 0.95; }
       80% { opacity: 0.8; }
-      100% { transform: translate(-140px, 160px) rotate(160deg); opacity: 0; }
+      100% { transform: translate(-150px, 170px) rotate(160deg); opacity: 0; }
     }
     @keyframes floatPetal2 {
       0% { transform: translate(0px, 0px) rotate(0deg); opacity: 0; }
-      25% { opacity: 0.95; }
+      25% { opacity: 0.9; }
       75% { opacity: 0.7; }
-      100% { transform: translate(-120px, 140px) rotate(-130deg); opacity: 0; }
+      100% { transform: translate(-120px, 150px) rotate(-130deg); opacity: 0; }
     }
     @keyframes floatPetal3 {
       0% { transform: translate(0px, 0px) rotate(0deg); opacity: 0; }
       30% { opacity: 0.85; }
       80% { opacity: 0.6; }
-      100% { transform: translate(-160px, 180px) rotate(180deg); opacity: 0; }
+      100% { transform: translate(-170px, 190px) rotate(180deg); opacity: 0; }
     }
     @keyframes blink {
       0%, 100% { opacity: 1; }
@@ -82,7 +76,7 @@
     }
     @keyframes pulseCircuit {
       0%, 100% { stroke-opacity: 0.2; }
-      50% { stroke-opacity: 0.7; }
+      50% { stroke-opacity: 0.75; }
     }
 
     .title-text {
@@ -102,6 +96,11 @@
       font-weight: 600;
       fill: #ffb5cc;
       letter-spacing: 0.5px;
+    }
+    .tagline-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12.5px;
+      fill: #8f9db0;
     }
     .term-line {
       font-family: 'Consolas', 'Courier New', monospace;
@@ -142,42 +141,45 @@
   </style>
 
   <!-- Card Background -->
-  <rect x="2" y="2" width="846" height="296" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5" />
+  <rect x="2" y="2" width="846" height="306" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5" />
 
   <!-- Background VLSI / Electronic Circuit Traces -->
   <g stroke="#ff2a75" stroke-width="1.2" fill="none" class="circuit-line">
     <path d="M 620 40 L 680 40 L 710 70 L 760 70" />
     <circle cx="760" cy="70" r="3" fill="#ff7597" />
-    <path d="M 640 260 L 700 260 L 730 230 L 790 230" />
-    <circle cx="790" cy="230" r="3" fill="#ff7597" />
-    <path d="M 120 20 L 150 20 L 170 40 L 220 40" stroke-opacity="0.3" />
-    <circle cx="220" cy="40" r="2.5" fill="#ff2a75" opacity="0.5" />
+    <path d="M 640 270 L 700 270 L 730 240 L 790 240" />
+    <circle cx="790" cy="240" r="3" fill="#ff7597" />
+    <path d="M 120 20 L 150 20 L 170 36 L 220 36" stroke-opacity="0.3" />
+    <circle cx="220" cy="36" r="2.5" fill="#ff2a75" opacity="0.5" />
   </g>
 
   <!-- Ambient Light Orbs -->
   <circle cx="680" cy="120" r="120" fill="#ff2a75" fill-opacity="0.12" filter="blur(35px)" />
   <circle cx="100" cy="240" r="80" fill="#ff7597" fill-opacity="0.08" filter="blur(25px)" />
 
-  <!-- Top System Badge -->
-  <g transform="translate(45, 28)">
-    <rect x="0" y="0" width="150" height="24" rx="12" fill="#ff2a75" fill-opacity="0.14" stroke="#ff7597" stroke-opacity="0.45" stroke-width="1" />
+  <!-- Top System Badge: SANTHIYA.EXE -->
+  <g transform="translate(45, 24)">
+    <rect x="0" y="0" width="168" height="24" rx="12" fill="#ff2a75" fill-opacity="0.14" stroke="#ff7597" stroke-opacity="0.45" stroke-width="1" />
     <circle cx="12" cy="12" r="4" fill="#ff2a75" filter="url(#petalGlow)" />
-    <text x="24" y="16" font-family="'Consolas', monospace" font-size="10.5" font-weight="700" fill="#ffa8c5" letter-spacing="1">SYSTEM.ONLINE</text>
+    <text x="24" y="16" font-family="'Consolas', monospace" font-size="10.5" font-weight="700" fill="#ffa8c5" letter-spacing="1">SANTHIYA.EXE // ONLINE</text>
   </g>
 
   <!-- Main Title -->
-  <text x="45" y="88" class="title-text">
+  <text x="45" y="82" class="title-text">
     Hi, I'm <tspan class="highlight-name">Santhiya B</tspan> 🌸
   </text>
 
-  <!-- Subtitle -->
-  <text x="45" y="118" class="subtitle-text">
-    Electronics &amp; Communication Engineer <tspan fill="#ff2a75">|</tspan> VLSI Frontend Enthusiast
+  <!-- Subtitle (From Portfolio) -->
+  <text x="45" y="110" class="subtitle-text">
+    ECE Student <tspan fill="#ff2a75">|</tspan> VLSI Enthusiast
+  </text>
+  <text x="45" y="130" class="tagline-text">
+    Building at the intersection of electronics, hardware architecture, and software development.
   </text>
 
-  <!-- Terminal Status Window (Directly from Portfolio!) -->
-  <g transform="translate(45, 140)">
-    <rect x="0" y="0" width="460" height="88" rx="10" fill="#05060a" fill-opacity="0.8" stroke="#ff7597" stroke-opacity="0.25" stroke-width="1" />
+  <!-- Terminal Status Window (From Portfolio) -->
+  <g transform="translate(45, 146)">
+    <rect x="0" y="0" width="460" height="92" rx="10" fill="#040508" fill-opacity="0.85" stroke="#ff7597" stroke-opacity="0.25" stroke-width="1" />
     
     <!-- Terminal Header Dots -->
     <circle cx="16" cy="14" r="3.5" fill="#ff2a75" />
@@ -186,18 +188,18 @@
     
     <!-- Terminal Lines -->
     <text x="16" y="38" class="term-line">
-      <tspan class="term-prompt">&gt; FOCUS:</tspan> VLSI Frontend &amp; RTL Design (Verilog)
+      <tspan class="term-prompt">&gt; USER:</tspan> SANTHIYA B
     </text>
     <text x="16" y="56" class="term-line">
-      <tspan class="term-prompt">&gt; HARDWARE:</tspan> Embedded Systems &amp; IoT (LoRa / Microcontrollers)
+      <tspan class="term-prompt">&gt; FIELD:</tspan> ELECTRONICS &amp; COMMUNICATION
     </text>
     <text x="16" y="74" class="term-line">
-      <tspan class="term-prompt">&gt; SOFTWARE:</tspan> Full-Stack Web Development<tspan class="cursor-blink">_</tspan>
+      <tspan class="term-prompt">&gt; INTEREST:</tspan> VLSI &amp; WEB DEVELOPMENT<tspan class="cursor-blink">_</tspan>
     </text>
   </g>
 
   <!-- Status Pills Row -->
-  <g transform="translate(45, 246)">
+  <g transform="translate(45, 256)">
     <!-- Pill 1: CGPA -->
     <rect x="0" y="0" width="130" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
     <text x="14" y="18" class="pill-text">🎓 CGPA: <tspan fill="#ff7597" font-weight="700">9.23</tspan></text>
@@ -206,12 +208,12 @@
     <rect x="142" y="0" width="160" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
     <text x="156" y="18" class="pill-text">⚡ B.Tech ECE (3rd Sem)</text>
 
-    <!-- Pill 3: Location -->
-    <rect x="314" y="0" width="135" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
-    <text x="328" y="18" class="pill-text">📍 Tamil Nadu, IN</text>
+    <!-- Pill 3: Live Portfolio Link -->
+    <rect x="314" y="0" width="180" height="28" rx="8" fill="#ff2a75" fill-opacity="0.12" stroke="#ff7597" stroke-opacity="0.4" stroke-width="1" />
+    <text x="328" y="18" class="pill-text">🌐 thiya-portfolio.vercel.app</text>
   </g>
 
-  <!-- RIGHT SIDE: Japanese Cherry Blossom Fan + VLSI Microchip Emblem -->
+  <!-- RIGHT SIDE: Japanese Cherry Blossom Fan + VLSI Microchip Core -->
   <g transform="translate(685, 142)" class="animated-fan">
     <!-- Fan Outer Glow Aura -->
     <circle cx="0" cy="0" r="85" fill="#ff2a75" fill-opacity="0.22" filter="blur(16px)" />
@@ -253,15 +255,12 @@
   </g>
 
   <!-- ANIMATED FALLING CHERRY BLOSSOM PETALS -->
-  <!-- Petal 1 -->
   <g class="petal-anim-1" transform="translate(730, 40)" filter="url(#petalGlow)">
     <path d="M 0 0 C 6 -3, 12 3, 8 10 C 3 14, -4 10, 0 0 Z" fill="#ff7597" />
   </g>
-  <!-- Petal 2 -->
   <g class="petal-anim-2" transform="translate(680, 70)" filter="url(#petalGlow)">
     <path d="M 0 0 C 5 -4, 11 2, 7 8 C 2 12, -3 9, 0 0 Z" fill="#ffa8c5" />
   </g>
-  <!-- Petal 3 -->
   <g class="petal-anim-3" transform="translate(770, 90)" filter="url(#petalGlow)">
     <path d="M 0 0 C 7 -2, 13 4, 9 11 C 4 15, -3 11, 0 0 Z" fill="#ff4d8d" />
   </g>

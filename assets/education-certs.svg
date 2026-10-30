@@ -1,9 +1,9 @@
-<svg viewBox="0 0 850 310" width="100%" height="310" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 850 320" width="100%" height="320" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="eduBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07080d" />
-      <stop offset="50%" stop-color="#0f111a" />
-      <stop offset="100%" stop-color="#180b18" />
+      <stop offset="0%" stop-color="#06070c" />
+      <stop offset="50%" stop-color="#0e1019" />
+      <stop offset="100%" stop-color="#190a18" />
     </linearGradient>
 
     <linearGradient id="eduBorder" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -47,7 +47,7 @@
   </style>
 
   <!-- Container Box -->
-  <rect x="2" y="2" width="846" height="306" rx="20" fill="url(#eduBg)" stroke="url(#eduBorder)" stroke-width="1.5" />
+  <rect x="2" y="2" width="846" height="316" rx="20" fill="url(#eduBg)" stroke="url(#eduBorder)" stroke-width="1.5" />
 
   <!-- LEFT: Education Journey -->
   <g transform="translate(45, 30)">
@@ -55,69 +55,69 @@
 
     <!-- College -->
     <g transform="translate(0, 22)">
-      <rect x="0" y="0" width="355" height="70" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <rect x="0" y="0" width="355" height="74" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
       <text x="16" y="24" class="item-title">B.Tech Electronics &amp; Communication</text>
-      <text x="16" y="42" class="item-sub">Kalasalingam Academy of Research and Education</text>
-      <text x="16" y="58" class="item-sub" fill="#ff7597">✦ 3rd Semester &bull; CGPA: 9.23</text>
-      <rect x="290" y="14" width="52" height="20" rx="5" fill="url(#tagPinkGrad)" />
-      <text x="316" y="28" class="badge-txt">9.23 CGPA</text>
+      <text x="16" y="44" class="item-sub">Kalasalingam Academy of Research and Education</text>
+      <text x="16" y="62" class="item-sub" fill="#ff7597">✦ 3rd Semester &bull; CGPA: 9.23</text>
+      <rect x="286" y="14" width="56" height="20" rx="5" fill="url(#tagPinkGrad)" />
+      <text x="314" y="28" class="badge-txt">9.23 CGPA</text>
     </g>
 
     <!-- School -->
-    <g transform="translate(0, 104)">
-      <rect x="0" y="0" width="355" height="66" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+    <g transform="translate(0, 108)">
+      <rect x="0" y="0" width="355" height="70" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
       <text x="16" y="24" class="item-title">Higher Secondary Education</text>
-      <text x="16" y="42" class="item-sub">Sri Matha Matric Higher Secondary School</text>
-      <text x="16" y="58" class="item-sub" fill="#ff7597">✦ Academic Performance: 90.16%</text>
-      <rect x="290" y="14" width="52" height="20" rx="5" fill="url(#tagPinkGrad)" />
-      <text x="316" y="28" class="badge-txt">90.16%</text>
+      <text x="16" y="44" class="item-sub">Sri Matha Matric Higher Secondary School</text>
+      <text x="16" y="60" class="item-sub" fill="#ff7597">✦ Score: 90.16%</text>
+      <rect x="286" y="14" width="56" height="20" rx="5" fill="url(#tagPinkGrad)" />
+      <text x="314" y="28" class="badge-txt">90.16%</text>
     </g>
 
     <!-- Current Status Pill -->
-    <g transform="translate(0, 182)">
+    <g transform="translate(0, 192)">
       <rect x="0" y="0" width="355" height="42" rx="8" fill="#ff2a75" fill-opacity="0.08" stroke="#ff7597" stroke-opacity="0.25" stroke-width="1" />
       <text x="14" y="26" font-family="-apple-system, sans-serif" font-size="11" fill="#ffaec5">💡 Exploring VLSI Frontend, Digital Design &amp; Web Systems</text>
     </g>
   </g>
 
   <!-- Vertical Divider Line -->
-  <line x1="425" y1="35" x2="425" y2="275" stroke="#ff7597" stroke-opacity="0.2" stroke-dasharray="4 4" />
+  <line x1="425" y1="35" x2="425" y2="285" stroke="#ff7597" stroke-opacity="0.2" stroke-dasharray="4 4" />
 
   <!-- RIGHT: Key Engineering Projects & Hardware Builds -->
   <g transform="translate(450, 30)">
-    <text x="0" y="0" class="edu-title">🌸 Featured Hardware &amp; IoT Builds</text>
+    <text x="0" y="0" class="edu-title">🌸 Featured Engineering Projects</text>
 
     <!-- Project 1 -->
     <g transform="translate(0, 22)">
-      <rect x="0" y="0" width="355" height="52" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-      <text x="16" y="22" class="item-title">SOS Watch (LoRa Emergency Comm.)</text>
-      <text x="16" y="40" class="item-sub">Off-grid long range alerts without mobile network</text>
-      <rect x="285" y="12" width="56" height="18" rx="4" fill="url(#tagPinkGrad)" />
-      <text x="313" y="25" class="badge-txt">EMBEDDED</text>
+      <rect x="0" y="0" width="355" height="54" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="22" class="item-title">📡 SOS WATCH (LoRa Emergency Comm.)</text>
+      <text x="16" y="40" class="item-sub">Wearable off-grid alert system without mobile network</text>
+      <rect x="282" y="12" width="60" height="18" rx="4" fill="url(#tagPinkGrad)" />
+      <text x="312" y="25" class="badge-txt">EMBEDDED</text>
     </g>
 
     <!-- Project 2 -->
-    <g transform="translate(0, 84)">
-      <rect x="0" y="0" width="355" height="52" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-      <text x="16" y="22" class="item-title">Real-Time Patient Health Monitor</text>
-      <text x="16" y="40" class="item-sub">IoT sensor integration &amp; continuous telemetry</text>
-      <rect x="285" y="12" width="56" height="18" rx="4" fill="url(#tagPinkGrad)" />
-      <text x="313" y="25" class="badge-txt">IoT DASH</text>
+    <g transform="translate(0, 86)">
+      <rect x="0" y="0" width="355" height="54" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="22" class="item-title">💓 PATIENT MONITOR (Real-Time IoT)</text>
+      <text x="16" y="40" class="item-sub">Biometric telemetry dashboard streaming sensor data</text>
+      <rect x="282" y="12" width="60" height="18" rx="4" fill="url(#tagPinkGrad)" />
+      <text x="312" y="25" class="badge-txt">IoT DASH</text>
     </g>
 
     <!-- Project 3 -->
-    <g transform="translate(0, 146)">
-      <rect x="0" y="0" width="355" height="52" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-      <text x="16" y="22" class="item-title">PMSM Adaptive PID Auto-Tuner</text>
-      <text x="16" y="40" class="item-sub">MATLAB &amp; Simulink control-system optimization</text>
-      <rect x="285" y="12" width="56" height="18" rx="4" fill="url(#tagPinkGrad)" />
-      <text x="313" y="25" class="badge-txt">SIMULINK</text>
+    <g transform="translate(0, 150)">
+      <rect x="0" y="0" width="355" height="54" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="22" class="item-title">⚡ PMSM CONTROL (Adaptive PID Tuning)</text>
+      <text x="16" y="40" class="item-sub">MATLAB/Simulink automatic PID parameter optimization</text>
+      <rect x="282" y="12" width="60" height="18" rx="4" fill="url(#tagPinkGrad)" />
+      <text x="312" y="25" class="badge-txt">CONTROL</text>
     </g>
 
     <!-- Project 4 small -->
-    <g transform="translate(0, 208)">
+    <g transform="translate(0, 214)">
       <rect x="0" y="0" width="355" height="34" rx="8" fill="#ffffff" fill-opacity="0.02" stroke="#ff7597" stroke-opacity="0.12" stroke-width="1" />
-      <text x="14" y="22" class="item-sub" fill="#ffdce6">📦 Smart Warehouse Package Counting (-80% manual effort)</text>
+      <text x="14" y="22" class="item-sub" fill="#ffdce6">🤖 SMART WAREHOUSE: Package Monitoring &bull; Automation</text>
     </g>
   </g>
 </svg>
