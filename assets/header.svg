@@ -1,0 +1,177 @@
+<svg viewBox="0 0 850 280" width="100%" height="280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c13" />
+      <stop offset="55%" stop-color="#12131d" />
+      <stop offset="100%" stop-color="#1b0e1b" />
+    </linearGradient>
+
+    <!-- Sakura Pink Gradient -->
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2a75" />
+      <stop offset="50%" stop-color="#ff7597" />
+      <stop offset="100%" stop-color="#ffaec5" />
+    </linearGradient>
+
+    <!-- Fan Body Gradient -->
+    <linearGradient id="fanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.95" />
+      <stop offset="60%" stop-color="#ff2a75" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#380d1e" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Subtle Border Stroke Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#ff2a75" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.45" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="sakuraGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      fill: #ffffff;
+    }
+    .highlight-name {
+      fill: url(#pinkGrad);
+      filter: url(#textGlow);
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      fill: #ffb8d0;
+      letter-spacing: 0.5px;
+    }
+    .tag-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      fill: #ff9ebb;
+      letter-spacing: 1.5px;
+    }
+    .desc-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13.5px;
+      font-weight: 400;
+      fill: #a2adbd;
+    }
+    .pill-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      fill: #e1e7f0;
+    }
+  </style>
+
+  <!-- Card Background -->
+  <rect x="2" y="2" width="846" height="276" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="700" cy="90" r="130" fill="#ff2a75" fill-opacity="0.14" filter="blur(30px)" />
+  <circle cx="100" cy="240" r="80" fill="#ff7597" fill-opacity="0.08" filter="blur(25px)" />
+
+  <!-- Tag Pill -->
+  <g transform="translate(45, 34)">
+    <rect x="0" y="0" width="185" height="26" rx="13" fill="#ff2a75" fill-opacity="0.12" stroke="#ff7597" stroke-opacity="0.4" stroke-width="1" />
+    <text x="14" y="17" class="tag-text">🌸 WELCOME TO MY REALM</text>
+  </g>
+
+  <!-- Title Text -->
+  <text x="45" y="102" class="title-text">
+    Hi, I'm <tspan class="highlight-name">Santhiya</tspan> 🌸
+  </text>
+
+  <!-- Subtitle Text -->
+  <text x="45" y="138" class="subtitle-text">
+    Software Developer | Full-Stack Enthusiast
+  </text>
+
+  <!-- Bio Descriptions -->
+  <text x="45" y="174" class="desc-text">
+    Turning ideas into reality through elegant architecture, modern technologies,
+  </text>
+  <text x="45" y="196" class="desc-text">
+    and beautifully crafted interactive user experiences.
+  </text>
+
+  <!-- Status Badges / Pills -->
+  <g transform="translate(45, 222)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="185" height="30" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.25" stroke-width="1" />
+    <circle cx="15" cy="15" r="4" fill="#ff2a75" filter="url(#textGlow)" />
+    <text x="28" y="19.5" class="pill-text">Open for Collaboration</text>
+
+    <!-- Pill 2 -->
+    <rect x="200" y="0" width="160" height="30" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.25" stroke-width="1" />
+    <text x="214" y="19.5" class="pill-text">🌸 Dark Sakura Theme</text>
+  </g>
+
+  <!-- RIGHT SIDE: Japanese Cherry Blossom Fan & Floral Visual -->
+  <g transform="translate(680, 135)" filter="url(#sakuraGlow)">
+    <!-- Fan Outer Glow Aura -->
+    <circle cx="0" cy="0" r="85" fill="#ff2a75" fill-opacity="0.2" filter="blur(15px)" />
+    
+    <!-- Fan Leaf Arc -->
+    <path d="M -75 10 A 85 85 0 0 1 75 10 L 0 25 Z" fill="url(#fanGrad)" stroke="#ff94b8" stroke-width="1.5" />
+    
+    <!-- Fan Ribs -->
+    <line x1="0" y1="25" x2="-65" y2="-18" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="0" y1="25" x2="-45" y2="-45" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="0" y1="25" x2="-20" y2="-62" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="0" y1="25" x2="0" y2="-68" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.8" />
+    <line x1="0" y1="25" x2="20" y2="-62" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="0" y1="25" x2="45" y2="-45" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
+    <line x1="0" y1="25" x2="65" y2="-18" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
+
+    <!-- Cherry Blossom Branch Silhouette on Fan -->
+    <path d="M -30 -15 Q -10 -25 5 -18 T 35 -30" stroke="#ffe4ed" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.95" />
+    <circle cx="-10" cy="-20" r="4" fill="#ffffff" />
+    <circle cx="5" cy="-18" r="4.5" fill="#ffa8c5" />
+    <circle cx="20" cy="-25" r="3.5" fill="#ff7597" />
+    <circle cx="35" cy="-30" r="4.5" fill="#ffffff" />
+
+    <!-- Fan Pivot / Rivet -->
+    <circle cx="0" cy="25" r="6.5" fill="#ffeaf1" stroke="#ff2a75" stroke-width="2" />
+    <circle cx="0" cy="25" r="2.5" fill="#ff2a75" />
+
+    <!-- Hanging Pink Tassel -->
+    <path d="M 0 32 L 0 55" stroke="#ff4d8d" stroke-width="3" stroke-linecap="round" />
+    <ellipse cx="0" cy="58" rx="4.5" ry="7.5" fill="#ff2a75" />
+    <path d="M -3 64 L -5 82 M 0 65 L 0 84 M 3 64 L 5 82" stroke="#ffa3c4" stroke-width="1.8" stroke-linecap="round" />
+  </g>
+
+  <!-- Floating Falling Petals -->
+  <g fill="#ff7597">
+    <!-- Petal 1 -->
+    <path d="M 540 80 C 543 78, 547 81, 545 85 C 542 88, 537 85, 540 80 Z" opacity="0.75" />
+    <!-- Petal 2 -->
+    <path d="M 590 190 C 594 187, 599 191, 597 195 C 593 199, 587 195, 590 190 Z" opacity="0.85" />
+    <!-- Petal 3 -->
+    <path d="M 780 220 C 784 217, 789 221, 787 225 C 783 229, 777 225, 780 220 Z" opacity="0.7" />
+    <!-- Petal 4 -->
+    <path d="M 490 225 C 493 223, 497 226, 495 230 C 492 233, 487 230, 490 225 Z" opacity="0.6" />
+  </g>
+</svg>

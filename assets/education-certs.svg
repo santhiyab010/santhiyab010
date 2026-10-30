@@ -1,0 +1,113 @@
+<svg viewBox="0 0 850 300" width="100%" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="eduBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c13" />
+      <stop offset="50%" stop-color="#12131d" />
+      <stop offset="100%" stop-color="#190e1b" />
+    </linearGradient>
+
+    <linearGradient id="eduBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#ff2a75" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.35" />
+    </linearGradient>
+
+    <linearGradient id="tagPinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2a75" />
+      <stop offset="100%" stop-color="#ff7597" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .edu-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      fill: #ffffff;
+      letter-spacing: 0.3px;
+    }
+    .item-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #ffdce6;
+    }
+    .item-sub {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 11.5px;
+      fill: #8c97a8;
+    }
+    .badge-txt {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      fill: #ffffff;
+    }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="846" height="296" rx="20" fill="url(#eduBg)" stroke="url(#eduBorder)" stroke-width="1.5" />
+
+  <!-- LEFT: Certificates & Achievements -->
+  <g transform="translate(45, 30)">
+    <text x="0" y="0" class="edu-title">🌸 Certifications &amp; Badges</text>
+
+    <!-- Cert Item 1 -->
+    <g transform="translate(0, 22)">
+      <rect x="0" y="0" width="355" height="60" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
+      <text x="16" y="25" class="item-title">Full-Stack Web Development</text>
+      <text x="16" y="44" class="item-sub">Frontend Architecture &amp; RESTful APIs</text>
+      <rect x="295" y="16" width="46" height="20" rx="5" fill="url(#tagPinkGrad)" />
+      <text x="306" y="30" class="badge-txt">VERIFIED</text>
+    </g>
+
+    <!-- Cert Item 2 -->
+    <g transform="translate(0, 94)">
+      <rect x="0" y="0" width="355" height="60" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
+      <text x="16" y="25" class="item-title">Modern JavaScript (ES6+) &amp; React</text>
+      <text x="16" y="44" class="item-sub">Component Design &amp; State Management</text>
+      <rect x="295" y="16" width="46" height="20" rx="5" fill="url(#tagPinkGrad)" />
+      <text x="306" y="30" class="badge-txt">VERIFIED</text>
+    </g>
+
+    <!-- Cert Item 3 -->
+    <g transform="translate(0, 166)">
+      <rect x="0" y="0" width="355" height="60" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
+      <text x="16" y="25" class="item-title">UI/UX Design &amp; Responsive Layouts</text>
+      <text x="16" y="44" class="item-sub">Figma to Code &amp; Modern Styling</text>
+      <rect x="295" y="16" width="46" height="20" rx="5" fill="url(#tagPinkGrad)" />
+      <text x="306" y="30" class="badge-txt">VERIFIED</text>
+    </g>
+  </g>
+
+  <!-- Vertical Divider Line -->
+  <line x1="425" y1="35" x2="425" y2="265" stroke="#ff7597" stroke-opacity="0.2" stroke-dasharray="4 4" />
+
+  <!-- RIGHT: Education & Journey -->
+  <g transform="translate(450, 30)">
+    <text x="0" y="0" class="edu-title">🌸 Education &amp; Background</text>
+
+    <!-- Edu Item 1 -->
+    <g transform="translate(0, 22)">
+      <rect x="0" y="0" width="355" height="68" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
+      <text x="16" y="26" class="item-title">Bachelor's Degree in Computer Science / IT</text>
+      <text x="16" y="45" class="item-sub">Software Engineering, Data Structures &amp; Web Tech</text>
+      <text x="16" y="60" class="item-sub" fill="#ff7597">✦ Academic Journey &amp; Projects</text>
+    </g>
+
+    <!-- Edu Item 2 -->
+    <g transform="translate(0, 102)">
+      <rect x="0" y="0" width="355" height="68" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.16" stroke-width="1" />
+      <text x="16" y="26" class="item-title">Advanced Web Development Immersive</text>
+      <text x="16" y="45" class="item-sub">Full Stack Engineering, Production Deployments</text>
+      <text x="16" y="60" class="item-sub" fill="#ff7597">✦ Modern Tech Stack Specialization</text>
+    </g>
+
+    <!-- Small philosophy / note -->
+    <g transform="translate(0, 182)">
+      <rect x="0" y="0" width="355" height="44" rx="8" fill="#ff2a75" fill-opacity="0.08" stroke="#ff7597" stroke-opacity="0.2" stroke-width="1" />
+      <text x="14" y="27" font-family="-apple-system, sans-serif" font-size="11.5" fill="#ffaec5">💡 Lifelong learner committed to exploring next-gen tech</text>
+    </g>
+  </g>
+</svg>
+
