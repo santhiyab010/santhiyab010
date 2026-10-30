@@ -1,10 +1,10 @@
-<svg viewBox="0 0 850 310" width="100%" height="310" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 850 350" width="100%" height="350" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06070c" />
+      <stop offset="0%" stop-color="#07080d" />
       <stop offset="50%" stop-color="#0e1019" />
-      <stop offset="100%" stop-color="#190a18" />
+      <stop offset="100%" stop-color="#180a18" />
     </linearGradient>
 
     <!-- Sakura Pink Gradient -->
@@ -18,19 +18,19 @@
     <linearGradient id="fanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ff7597" stop-opacity="0.95" />
       <stop offset="60%" stop-color="#ff2a75" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#380d1e" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#3a0d1e" stop-opacity="0.95" />
     </linearGradient>
 
     <!-- Border Stroke Gradient -->
     <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.5" />
+      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.4" />
       <stop offset="50%" stop-color="#ff2a75" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.45" />
     </linearGradient>
 
     <!-- Filters -->
     <filter id="sakuraGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feGaussianBlur stdDeviation="6" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
@@ -47,54 +47,86 @@
   </defs>
 
   <style>
-    /* Keyframe Animations */
-    @keyframes pulseGlow {
-      0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 42, 117, 0.45)); opacity: 0.95; }
-      50% { filter: drop-shadow(0 0 25px rgba(255, 42, 117, 0.85)); opacity: 1; }
+    /* Continuous Top-to-Bottom Falling Petal Animations */
+    @keyframes fallDown1 {
+      0% {
+        transform: translate(0px, -40px) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 0.9; }
+      90% { opacity: 0.8; }
+      100% {
+        transform: translate(-90px, 370px) rotate(320deg);
+        opacity: 0;
+      }
     }
-    @keyframes floatPetal1 {
-      0% { transform: translate(0px, 0px) rotate(0deg); opacity: 0; }
-      20% { opacity: 0.95; }
-      80% { opacity: 0.8; }
-      100% { transform: translate(-150px, 170px) rotate(160deg); opacity: 0; }
+    @keyframes fallDown2 {
+      0% {
+        transform: translate(0px, -40px) rotate(0deg);
+        opacity: 0;
+      }
+      15% { opacity: 0.85; }
+      85% { opacity: 0.75; }
+      100% {
+        transform: translate(80px, 370px) rotate(-280deg);
+        opacity: 0;
+      }
     }
-    @keyframes floatPetal2 {
-      0% { transform: translate(0px, 0px) rotate(0deg); opacity: 0; }
-      25% { opacity: 0.9; }
-      75% { opacity: 0.7; }
-      100% { transform: translate(-120px, 150px) rotate(-130deg); opacity: 0; }
+    @keyframes fallDown3 {
+      0% {
+        transform: translate(0px, -40px) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 0.95; }
+      85% { opacity: 0.7; }
+      100% {
+        transform: translate(-60px, 370px) rotate(240deg);
+        opacity: 0;
+      }
     }
-    @keyframes floatPetal3 {
-      0% { transform: translate(0px, 0px) rotate(0deg); opacity: 0; }
-      30% { opacity: 0.85; }
-      80% { opacity: 0.6; }
-      100% { transform: translate(-170px, 190px) rotate(180deg); opacity: 0; }
+    @keyframes fallDown4 {
+      0% {
+        transform: translate(0px, -40px) rotate(0deg);
+        opacity: 0;
+      }
+      15% { opacity: 0.8; }
+      90% { opacity: 0.75; }
+      100% {
+        transform: translate(100px, 370px) rotate(-340deg);
+        opacity: 0;
+      }
+    }
+
+    /* Fan Breathing Pulse */
+    @keyframes fanPulse {
+      0%, 100% { filter: drop-shadow(0 0 12px rgba(255, 42, 117, 0.45)); transform: scale(1); }
+      50% { filter: drop-shadow(0 0 28px rgba(255, 42, 117, 0.85)); transform: scale(1.02); }
+    }
+    @keyframes tasselSway {
+      0%, 100% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
     }
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
-    @keyframes pulseCircuit {
-      0%, 100% { stroke-opacity: 0.2; }
-      50% { stroke-opacity: 0.75; }
-    }
 
     .title-text {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-weight: 800;
-      font-size: 34px;
+      font-size: 35px;
       fill: #ffffff;
       letter-spacing: -0.5px;
     }
     .highlight-name {
       fill: url(#pinkGrad);
-      filter: drop-shadow(0 0 15px rgba(255, 42, 117, 0.6));
+      filter: drop-shadow(0 0 15px rgba(255, 42, 117, 0.65));
     }
     .subtitle-text {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 15px;
       font-weight: 600;
-      fill: #ffb5cc;
+      fill: #ffb8d0;
       letter-spacing: 0.5px;
     }
     .tagline-text {
@@ -121,65 +153,86 @@
       font-weight: 600;
       fill: #ffdce6;
     }
-    .animated-fan {
-      animation: pulseGlow 4s infinite ease-in-out;
+    .fan-group {
+      animation: fanPulse 4s infinite ease-in-out;
+      transform-origin: 685px 155px;
     }
-    .petal-anim-1 {
-      animation: floatPetal1 6s infinite linear;
+    .tassel-group {
+      animation: tasselSway 3s infinite ease-in-out;
+      transform-origin: 0px 25px;
     }
-    .petal-anim-2 {
-      animation: floatPetal2 7.5s infinite linear;
-      animation-delay: 2s;
-    }
-    .petal-anim-3 {
-      animation: floatPetal3 8s infinite linear;
-      animation-delay: 4s;
-    }
-    .circuit-line {
-      animation: pulseCircuit 3s infinite ease-in-out;
-    }
+
+    /* Falling Petal Classes */
+    .p-fall-1 { animation: fallDown1 7s infinite linear; }
+    .p-fall-2 { animation: fallDown2 8.5s infinite linear; animation-delay: 1.8s; }
+    .p-fall-3 { animation: fallDown3 6.5s infinite linear; animation-delay: 3.2s; }
+    .p-fall-4 { animation: fallDown4 9s infinite linear; animation-delay: 0.5s; }
+    .p-fall-5 { animation: fallDown1 8s infinite linear; animation-delay: 4.5s; }
+    .p-fall-6 { animation: fallDown2 7.2s infinite linear; animation-delay: 2.8s; }
+    .p-fall-7 { animation: fallDown3 8.8s infinite linear; animation-delay: 5.2s; }
   </style>
 
   <!-- Card Background -->
-  <rect x="2" y="2" width="846" height="306" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5" />
+  <rect x="2" y="2" width="846" height="346" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5" />
 
-  <!-- Background VLSI / Electronic Circuit Traces -->
-  <g stroke="#ff2a75" stroke-width="1.2" fill="none" class="circuit-line">
-    <path d="M 620 40 L 680 40 L 710 70 L 760 70" />
-    <circle cx="760" cy="70" r="3" fill="#ff7597" />
-    <path d="M 640 270 L 700 270 L 730 240 L 790 240" />
-    <circle cx="790" cy="240" r="3" fill="#ff7597" />
-    <path d="M 120 20 L 150 20 L 170 36 L 220 36" stroke-opacity="0.3" />
-    <circle cx="220" cy="36" r="2.5" fill="#ff2a75" opacity="0.5" />
+  <!-- Ambient Glow -->
+  <circle cx="680" cy="130" r="140" fill="#ff2a75" fill-opacity="0.14" filter="blur(40px)" />
+  <circle cx="100" cy="270" r="90" fill="#ff7597" fill-opacity="0.08" filter="blur(30px)" />
+
+  <!-- ================= TOP-TO-BOTTOM FALLING SAKURA PETALS ================= -->
+  <!-- Petal 1 (Left area) -->
+  <g class="p-fall-1" transform="translate(180, 0)" filter="url(#petalGlow)">
+    <path d="M 0 0 C 6 -3, 12 3, 8 10 C 3 14, -4 10, 0 0 Z" fill="#ff7597" />
+  </g>
+  <!-- Petal 2 (Mid-left) -->
+  <g class="p-fall-2" transform="translate(320, 0)" filter="url(#petalGlow)">
+    <path d="M 0 0 C 5 -4, 11 2, 7 8 C 2 12, -3 9, 0 0 Z" fill="#ffa8c5" />
+  </g>
+  <!-- Petal 3 (Center) -->
+  <g class="p-fall-3" transform="translate(470, 0)" filter="url(#petalGlow)">
+    <path d="M 0 0 C 7 -2, 13 4, 9 11 C 4 15, -3 11, 0 0 Z" fill="#ff4d8d" />
+  </g>
+  <!-- Petal 4 (Right-center) -->
+  <g class="p-fall-4" transform="translate(580, 0)" filter="url(#petalGlow)">
+    <path d="M 0 0 C 6 -3, 11 3, 7 9 C 2 13, -4 9, 0 0 Z" fill="#ff7597" />
+  </g>
+  <!-- Petal 5 (Far Right) -->
+  <g class="p-fall-5" transform="translate(760, 0)" filter="url(#petalGlow)">
+    <path d="M 0 0 C 5 -3, 10 2, 6 7 C 2 11, -3 8, 0 0 Z" fill="#ffaec5" />
+  </g>
+  <!-- Petal 6 (Far Left) -->
+  <g class="p-fall-6" transform="translate(90, 0)" filter="url(#petalGlow)">
+    <path d="M 0 0 C 7 -3, 12 4, 8 10 C 3 14, -3 10, 0 0 Z" fill="#ff4d8d" />
+  </g>
+  <!-- Petal 7 (Fan area) -->
+  <g class="p-fall-7" transform="translate(680, 0)" filter="url(#petalGlow)">
+    <path d="M 0 0 C 6 -4, 12 2, 8 8 C 3 12, -3 9, 0 0 Z" fill="#ff7597" />
   </g>
 
-  <!-- Ambient Light Orbs -->
-  <circle cx="680" cy="120" r="120" fill="#ff2a75" fill-opacity="0.12" filter="blur(35px)" />
-  <circle cx="100" cy="240" r="80" fill="#ff7597" fill-opacity="0.08" filter="blur(25px)" />
-
+  <!-- ================= LEFT CONTENT ================= -->
   <!-- Top System Badge: SANTHIYA.EXE -->
-  <g transform="translate(45, 24)">
+  <g transform="translate(45, 26)">
     <rect x="0" y="0" width="168" height="24" rx="12" fill="#ff2a75" fill-opacity="0.14" stroke="#ff7597" stroke-opacity="0.45" stroke-width="1" />
     <circle cx="12" cy="12" r="4" fill="#ff2a75" filter="url(#petalGlow)" />
     <text x="24" y="16" font-family="'Consolas', monospace" font-size="10.5" font-weight="700" fill="#ffa8c5" letter-spacing="1">SANTHIYA.EXE // ONLINE</text>
   </g>
 
   <!-- Main Title -->
-  <text x="45" y="82" class="title-text">
+  <text x="45" y="86" class="title-text">
     Hi, I'm <tspan class="highlight-name">Santhiya B</tspan> 🌸
   </text>
 
   <!-- Subtitle (From Portfolio) -->
-  <text x="45" y="110" class="subtitle-text">
+  <text x="45" y="116" class="subtitle-text">
     ECE Student <tspan fill="#ff2a75">|</tspan> VLSI Enthusiast
   </text>
-  <text x="45" y="130" class="tagline-text">
+  <text x="45" y="138" class="tagline-text">
     Building at the intersection of electronics, hardware architecture, and software development.
   </text>
 
   <!-- Terminal Status Window (From Portfolio) -->
-  <g transform="translate(45, 146)">
-    <rect x="0" y="0" width="460" height="92" rx="10" fill="#040508" fill-opacity="0.85" stroke="#ff7597" stroke-opacity="0.25" stroke-width="1" />
+  <g transform="translate(45, 156)">
+    <rect x="0" y="0" width="460" height="96" rx="10" fill="#040508" fill-opacity="0.88" stroke="#ff7597" stroke-opacity="0.25" stroke-width="1" />
     
     <!-- Terminal Header Dots -->
     <circle cx="16" cy="14" r="3.5" fill="#ff2a75" />
@@ -190,78 +243,103 @@
     <text x="16" y="38" class="term-line">
       <tspan class="term-prompt">&gt; USER:</tspan> SANTHIYA B
     </text>
-    <text x="16" y="56" class="term-line">
-      <tspan class="term-prompt">&gt; FIELD:</tspan> ELECTRONICS &amp; COMMUNICATION
+    <text x="16" y="58" class="term-line">
+      <tspan class="term-prompt">&gt; FIELD:</tspan> ELECTRONICS &amp; COMMUNICATION (CGPA: 9.23)
     </text>
-    <text x="16" y="74" class="term-line">
+    <text x="16" y="78" class="term-line">
       <tspan class="term-prompt">&gt; INTEREST:</tspan> VLSI &amp; WEB DEVELOPMENT<tspan class="cursor-blink">_</tspan>
     </text>
   </g>
 
   <!-- Status Pills Row -->
-  <g transform="translate(45, 256)">
-    <!-- Pill 1: CGPA -->
-    <rect x="0" y="0" width="130" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
-    <text x="14" y="18" class="pill-text">🎓 CGPA: <tspan fill="#ff7597" font-weight="700">9.23</tspan></text>
+  <g transform="translate(45, 274)">
+    <!-- Pill 1: Degree & CGPA -->
+    <rect x="0" y="0" width="180" height="30" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
+    <text x="14" y="19" class="pill-text">🎓 B.Tech ECE &bull; <tspan fill="#ff7597" font-weight="700">9.23 CGPA</tspan></text>
 
-    <!-- Pill 2: Degree -->
-    <rect x="142" y="0" width="160" height="28" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
-    <text x="156" y="18" class="pill-text">⚡ B.Tech ECE (3rd Sem)</text>
+    <!-- Pill 2: Portfolio Link -->
+    <rect x="192" y="0" width="185" height="30" rx="8" fill="#ff2a75" fill-opacity="0.12" stroke="#ff7597" stroke-opacity="0.4" stroke-width="1" />
+    <text x="206" y="19" class="pill-text">🌐 thiya-portfolio.vercel.app</text>
 
-    <!-- Pill 3: Live Portfolio Link -->
-    <rect x="314" y="0" width="180" height="28" rx="8" fill="#ff2a75" fill-opacity="0.12" stroke="#ff7597" stroke-opacity="0.4" stroke-width="1" />
-    <text x="328" y="18" class="pill-text">🌐 thiya-portfolio.vercel.app</text>
+    <!-- Pill 3: Location -->
+    <rect x="388" y="0" width="120" height="30" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
+    <text x="400" y="19" class="pill-text">📍 Tamil Nadu</text>
   </g>
 
-  <!-- RIGHT SIDE: Japanese Cherry Blossom Fan + VLSI Microchip Core -->
-  <g transform="translate(685, 142)" class="animated-fan">
+  <!-- ================= RIGHT SIDE: TRADITIONAL SAKURA FAN (NO VLSI BOX!) ================= -->
+  <g transform="translate(685, 155)" class="fan-group">
     <!-- Fan Outer Glow Aura -->
-    <circle cx="0" cy="0" r="85" fill="#ff2a75" fill-opacity="0.22" filter="blur(16px)" />
+    <circle cx="0" cy="0" r="95" fill="#ff2a75" fill-opacity="0.22" filter="blur(18px)" />
     
     <!-- Fan Leaf Arc -->
-    <path d="M -75 10 A 85 85 0 0 1 75 10 L 0 25 Z" fill="url(#fanGrad)" stroke="#ff94b8" stroke-width="1.5" />
+    <path d="M -85 10 A 95 95 0 0 1 85 10 L 0 28 Z" fill="url(#fanGrad)" stroke="#ff94b8" stroke-width="1.6" />
     
-    <!-- Fan Ribs -->
-    <line x1="0" y1="25" x2="-65" y2="-18" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
-    <line x1="0" y1="25" x2="-45" y2="-45" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
-    <line x1="0" y1="25" x2="-20" y2="-62" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
-    <line x1="0" y1="25" x2="0" y2="-68" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.8" />
-    <line x1="0" y1="25" x2="20" y2="-62" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
-    <line x1="0" y1="25" x2="45" y2="-45" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
-    <line x1="0" y1="25" x2="65" y2="-18" stroke="#ffd0df" stroke-width="1" stroke-opacity="0.6" />
+    <!-- Fan Ribs / Spines -->
+    <line x1="0" y1="28" x2="-75" y2="-22" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
+    <line x1="0" y1="28" x2="-52" y2="-52" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
+    <line x1="0" y1="28" x2="-25" y2="-72" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
+    <line x1="0" y1="28" x2="0" y2="-78" stroke="#ffd0df" stroke-width="1.4" stroke-opacity="0.8" />
+    <line x1="0" y1="28" x2="25" y2="-72" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
+    <line x1="0" y1="28" x2="52" y2="-52" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
+    <line x1="0" y1="28" x2="75" y2="-22" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
 
-    <!-- VLSI Integrated Microchip Icon on Fan -->
-    <g transform="translate(0, -28)">
-      <rect x="-18" y="-18" width="36" height="36" rx="6" fill="#08090f" stroke="#ff7597" stroke-width="1.5" />
-      <rect x="-10" y="-10" width="20" height="20" rx="3" fill="#ff2a75" fill-opacity="0.3" stroke="#ff94b8" stroke-width="1" />
-      <text x="0" y="4" font-family="'Consolas', monospace" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">VLSI</text>
-      <!-- Chip Pins -->
-      <line x1="-22" y1="-8" x2="-18" y2="-8" stroke="#ffaec5" stroke-width="1.5" />
-      <line x1="-22" y1="0" x2="-18" y2="0" stroke="#ffaec5" stroke-width="1.5" />
-      <line x1="-22" y1="8" x2="-18" y2="8" stroke="#ffaec5" stroke-width="1.5" />
-      <line x1="18" y1="-8" x2="22" y2="-8" stroke="#ffaec5" stroke-width="1.5" />
-      <line x1="18" y1="0" x2="22" y2="0" stroke="#ffaec5" stroke-width="1.5" />
-      <line x1="18" y1="8" x2="22" y2="8" stroke="#ffaec5" stroke-width="1.5" />
+    <!-- Pure Cherry Blossom Floral Silhouette on the Fan Face (NO CHIP, NO BOX!) -->
+    <g transform="translate(0, -25)">
+      <!-- Branch curved across fan -->
+      <path d="M -42 12 Q -18 -8 5 -5 T 45 -20" stroke="#ffe5ed" stroke-width="2.6" stroke-linecap="round" fill="none" opacity="0.95" />
+      <path d="M -8 -6 Q -12 -22 -6 -32" stroke="#ffe5ed" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.9" />
+      <path d="M 18 -10 Q 25 -24 35 -26" stroke="#ffe5ed" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.9" />
+
+      <!-- Center Big Sakura Blossom -->
+      <g transform="translate(5, -5) scale(1.1)">
+        <circle cx="0" cy="-6" r="4.2" fill="#ffffff" />
+        <circle cx="6" cy="-2" r="4.2" fill="#ffa8c5" />
+        <circle cx="4" cy="5" r="4.2" fill="#ff7597" />
+        <circle cx="-4" cy="5" r="4.2" fill="#ff7597" />
+        <circle cx="-6" cy="-2" r="4.2" fill="#ffa8c5" />
+        <circle cx="0" cy="0" r="2.2" fill="#ff2a75" />
+      </g>
+
+      <!-- Blossom 2 (Left) -->
+      <g transform="translate(-25, 4) scale(0.9)">
+        <circle cx="0" cy="-5" r="3.8" fill="#ffffff" />
+        <circle cx="5" cy="-2" r="3.8" fill="#ffaec5" />
+        <circle cx="3" cy="4" r="3.8" fill="#ff7597" />
+        <circle cx="-3" cy="4" r="3.8" fill="#ff7597" />
+        <circle cx="-5" cy="-2" r="3.8" fill="#ffaec5" />
+        <circle cx="0" cy="0" r="1.8" fill="#ff2a75" />
+      </g>
+
+      <!-- Blossom 3 (Upper Branch) -->
+      <g transform="translate(-6, -32) scale(0.85)">
+        <circle cx="0" cy="-5" r="3.5" fill="#ffffff" />
+        <circle cx="5" cy="-2" r="3.5" fill="#ffa8c5" />
+        <circle cx="3" cy="4" r="3.5" fill="#ff7597" />
+        <circle cx="-3" cy="4" r="3.5" fill="#ff7597" />
+        <circle cx="-5" cy="-2" r="3.5" fill="#ffa8c5" />
+        <circle cx="0" cy="0" r="1.6" fill="#ff2a75" />
+      </g>
+
+      <!-- Blossom 4 (Right Tip) -->
+      <g transform="translate(42, -22) scale(0.8)">
+        <circle cx="0" cy="-5" r="3.2" fill="#ffffff" />
+        <circle cx="5" cy="-2" r="3.2" fill="#ffa8c5" />
+        <circle cx="3" cy="4" r="3.2" fill="#ff7597" />
+        <circle cx="-3" cy="4" r="3.2" fill="#ff7597" />
+        <circle cx="-5" cy="-2" r="3.2" fill="#ffa8c5" />
+        <circle cx="0" cy="0" r="1.5" fill="#ff2a75" />
+      </g>
     </g>
 
     <!-- Fan Pivot / Rivet -->
-    <circle cx="0" cy="25" r="6.5" fill="#ffeaf1" stroke="#ff2a75" stroke-width="2" />
-    <circle cx="0" cy="25" r="2.5" fill="#ff2a75" />
+    <circle cx="0" cy="28" r="7" fill="#ffeaf1" stroke="#ff2a75" stroke-width="2.2" />
+    <circle cx="0" cy="28" r="3" fill="#ff2a75" />
 
-    <!-- Hanging Pink Tassel -->
-    <path d="M 0 32 L 0 55" stroke="#ff4d8d" stroke-width="3" stroke-linecap="round" />
-    <ellipse cx="0" cy="58" rx="4.5" ry="7.5" fill="#ff2a75" />
-    <path d="M -3 64 L -5 82 M 0 65 L 0 84 M 3 64 L 5 82" stroke="#ffa3c4" stroke-width="1.8" stroke-linecap="round" />
-  </g>
-
-  <!-- ANIMATED FALLING CHERRY BLOSSOM PETALS -->
-  <g class="petal-anim-1" transform="translate(730, 40)" filter="url(#petalGlow)">
-    <path d="M 0 0 C 6 -3, 12 3, 8 10 C 3 14, -4 10, 0 0 Z" fill="#ff7597" />
-  </g>
-  <g class="petal-anim-2" transform="translate(680, 70)" filter="url(#petalGlow)">
-    <path d="M 0 0 C 5 -4, 11 2, 7 8 C 2 12, -3 9, 0 0 Z" fill="#ffa8c5" />
-  </g>
-  <g class="petal-anim-3" transform="translate(770, 90)" filter="url(#petalGlow)">
-    <path d="M 0 0 C 7 -2, 13 4, 9 11 C 4 15, -3 11, 0 0 Z" fill="#ff4d8d" />
+    <!-- Hanging Silk Tassel with Animated Sway -->
+    <g class="tassel-group">
+      <path d="M 0 35 L 0 62" stroke="#ff4d8d" stroke-width="3.2" stroke-linecap="round" />
+      <ellipse cx="0" cy="65" rx="5" ry="8" fill="#ff2a75" />
+      <path d="M -4 72 L -6 92 M 0 73 L 0 94 M 4 72 L 6 92" stroke="#ffa3c4" stroke-width="2" stroke-linecap="round" />
+    </g>
   </g>
 </svg>
