@@ -1,44 +1,45 @@
-<svg viewBox="0 0 850 350" width="100%" height="350" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 850 380" width="100%" height="380" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07080d" />
-      <stop offset="50%" stop-color="#0e1019" />
-      <stop offset="100%" stop-color="#180a18" />
+    <!-- Background Gradient (Midnight Dark) -->
+    <linearGradient id="bgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060a" />
+      <stop offset="45%" stop-color="#0e1019" />
+      <stop offset="100%" stop-color="#1a091a" />
     </linearGradient>
 
-    <!-- Sakura Pink Gradient -->
-    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Glowing Sakura Pink Gradient -->
+    <linearGradient id="pinkGlowDark" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ff2a75" />
       <stop offset="50%" stop-color="#ff7597" />
-      <stop offset="100%" stop-color="#ffaec5" />
+      <stop offset="100%" stop-color="#ffc2d6" />
     </linearGradient>
 
-    <!-- Fan Body Gradient -->
-    <linearGradient id="fanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.95" />
-      <stop offset="60%" stop-color="#ff2a75" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#3a0d1e" stop-opacity="0.95" />
-    </linearGradient>
+    <!-- Warm Lantern Fire Gradient -->
+    <radialGradient id="lanternFire" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff6d6" stop-opacity="1" />
+      <stop offset="35%" stop-color="#ffbe53" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#ff4a79" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#ff2a75" stop-opacity="0" />
+    </radialGradient>
 
-    <!-- Border Stroke Gradient -->
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.4" />
+    <!-- Border Gradient -->
+    <linearGradient id="borderDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.5" />
       <stop offset="50%" stop-color="#ff2a75" stop-opacity="0.15" />
       <stop offset="100%" stop-color="#ff7597" stop-opacity="0.45" />
     </linearGradient>
 
     <!-- Filters -->
-    <filter id="sakuraGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="6" result="blur" />
+    <filter id="sakuraGlowDark" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
 
-    <filter id="petalGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
+    <filter id="lanternGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
@@ -47,64 +48,38 @@
   </defs>
 
   <style>
-    /* Continuous Top-to-Bottom Falling Petal Animations */
-    @keyframes fallDown1 {
-      0% {
-        transform: translate(0px, -40px) rotate(0deg);
-        opacity: 0;
-      }
-      10% { opacity: 0.9; }
-      90% { opacity: 0.8; }
-      100% {
-        transform: translate(-90px, 370px) rotate(320deg);
-        opacity: 0;
-      }
+    /* Swaying Lantern Animation */
+    @keyframes swayLeft {
+      0%, 100% { transform: rotate(-3.5deg); }
+      50% { transform: rotate(3.5deg); }
     }
-    @keyframes fallDown2 {
-      0% {
-        transform: translate(0px, -40px) rotate(0deg);
-        opacity: 0;
-      }
-      15% { opacity: 0.85; }
-      85% { opacity: 0.75; }
-      100% {
-        transform: translate(80px, 370px) rotate(-280deg);
-        opacity: 0;
-      }
+    @keyframes swayRight {
+      0%, 100% { transform: rotate(3deg); }
+      50% { transform: rotate(-3deg); }
     }
-    @keyframes fallDown3 {
-      0% {
-        transform: translate(0px, -40px) rotate(0deg);
-        opacity: 0;
-      }
-      10% { opacity: 0.95; }
-      85% { opacity: 0.7; }
-      100% {
-        transform: translate(-60px, 370px) rotate(240deg);
-        opacity: 0;
-      }
-    }
-    @keyframes fallDown4 {
-      0% {
-        transform: translate(0px, -40px) rotate(0deg);
-        opacity: 0;
-      }
-      15% { opacity: 0.8; }
-      90% { opacity: 0.75; }
-      100% {
-        transform: translate(100px, 370px) rotate(-340deg);
-        opacity: 0;
-      }
+    @keyframes lanternFlicker {
+      0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 10px rgba(255, 190, 83, 0.6)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 22px rgba(255, 190, 83, 0.95)); }
     }
 
-    /* Fan Breathing Pulse */
-    @keyframes fanPulse {
-      0%, 100% { filter: drop-shadow(0 0 12px rgba(255, 42, 117, 0.45)); transform: scale(1); }
-      50% { filter: drop-shadow(0 0 28px rgba(255, 42, 117, 0.85)); transform: scale(1.02); }
+    /* Continuous Top-to-Bottom Falling Sakura Petals */
+    @keyframes fallPetal1 {
+      0% { transform: translate(0px, -40px) rotate(0deg); opacity: 0; }
+      15% { opacity: 0.95; }
+      85% { opacity: 0.8; }
+      100% { transform: translate(-100px, 400px) rotate(340deg); opacity: 0; }
     }
-    @keyframes tasselSway {
-      0%, 100% { transform: rotate(-3deg); }
-      50% { transform: rotate(3deg); }
+    @keyframes fallPetal2 {
+      0% { transform: translate(0px, -40px) rotate(0deg); opacity: 0; }
+      20% { opacity: 0.9; }
+      80% { opacity: 0.75; }
+      100% { transform: translate(80px, 400px) rotate(-300deg); opacity: 0; }
+    }
+    @keyframes fallPetal3 {
+      0% { transform: translate(0px, -40px) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.95; }
+      90% { opacity: 0.8; }
+      100% { transform: translate(-70px, 400px) rotate(260deg); opacity: 0; }
     }
     @keyframes blink {
       0%, 100% { opacity: 1; }
@@ -114,29 +89,29 @@
     .title-text {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-weight: 800;
-      font-size: 35px;
+      font-size: 34px;
       fill: #ffffff;
       letter-spacing: -0.5px;
     }
     .highlight-name {
-      fill: url(#pinkGrad);
-      filter: drop-shadow(0 0 15px rgba(255, 42, 117, 0.65));
+      fill: url(#pinkGlowDark);
+      filter: drop-shadow(0 0 14px rgba(255, 42, 117, 0.7));
     }
     .subtitle-text {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 600;
       fill: #ffb8d0;
       letter-spacing: 0.5px;
     }
     .tagline-text {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 12.5px;
+      font-size: 12px;
       fill: #8f9db0;
     }
     .term-line {
       font-family: 'Consolas', 'Courier New', monospace;
-      font-size: 11.5px;
+      font-size: 11px;
       fill: #a6b5c9;
     }
     .term-prompt {
@@ -153,86 +128,223 @@
       font-weight: 600;
       fill: #ffdce6;
     }
-    .fan-group {
-      animation: fanPulse 4s infinite ease-in-out;
-      transform-origin: 685px 155px;
+
+    .lantern-left {
+      animation: swayLeft 4.5s infinite ease-in-out;
+      transform-origin: 640px 30px;
     }
-    .tassel-group {
-      animation: tasselSway 3s infinite ease-in-out;
-      transform-origin: 0px 25px;
+    .lantern-right {
+      animation: swayRight 5.2s infinite ease-in-out;
+      transform-origin: 760px 80px;
+    }
+    .lantern-glow-core {
+      animation: lanternFlicker 3s infinite ease-in-out;
     }
 
-    /* Falling Petal Classes */
-    .p-fall-1 { animation: fallDown1 7s infinite linear; }
-    .p-fall-2 { animation: fallDown2 8.5s infinite linear; animation-delay: 1.8s; }
-    .p-fall-3 { animation: fallDown3 6.5s infinite linear; animation-delay: 3.2s; }
-    .p-fall-4 { animation: fallDown4 9s infinite linear; animation-delay: 0.5s; }
-    .p-fall-5 { animation: fallDown1 8s infinite linear; animation-delay: 4.5s; }
-    .p-fall-6 { animation: fallDown2 7.2s infinite linear; animation-delay: 2.8s; }
-    .p-fall-7 { animation: fallDown3 8.8s infinite linear; animation-delay: 5.2s; }
+    .p-fall-1 { animation: fallPetal1 7s infinite linear; }
+    .p-fall-2 { animation: fallPetal2 8.5s infinite linear; animation-delay: 2s; }
+    .p-fall-3 { animation: fallPetal3 6.5s infinite linear; animation-delay: 3.5s; }
+    .p-fall-4 { animation: fallPetal1 9s infinite linear; animation-delay: 1.2s; }
+    .p-fall-5 { animation: fallPetal2 7.8s infinite linear; animation-delay: 4.8s; }
+    .p-fall-6 { animation: fallPetal3 8.2s infinite linear; animation-delay: 0.8s; }
   </style>
 
-  <!-- Card Background -->
-  <rect x="2" y="2" width="846" height="346" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5" />
+  <!-- Container Box -->
+  <rect x="2" y="2" width="846" height="376" rx="20" fill="url(#bgDark)" stroke="url(#borderDark)" stroke-width="1.5" />
 
-  <!-- Ambient Glow -->
-  <circle cx="680" cy="130" r="140" fill="#ff2a75" fill-opacity="0.14" filter="blur(40px)" />
-  <circle cx="100" cy="270" r="90" fill="#ff7597" fill-opacity="0.08" filter="blur(30px)" />
+  <!-- Ambient Glow in Lantern & Tree Area -->
+  <circle cx="700" cy="140" r="150" fill="#ff4a79" fill-opacity="0.12" filter="blur(45px)" />
+  <circle cx="720" cy="180" r="80" fill="#ffbe53" fill-opacity="0.1" filter="blur(30px)" />
+  <circle cx="100" cy="300" r="90" fill="#ff7597" fill-opacity="0.08" filter="blur(30px)" />
 
   <!-- ================= TOP-TO-BOTTOM FALLING SAKURA PETALS ================= -->
-  <!-- Petal 1 (Left area) -->
-  <g class="p-fall-1" transform="translate(180, 0)" filter="url(#petalGlow)">
+  <g class="p-fall-1" transform="translate(160, 0)" filter="url(#sakuraGlowDark)">
     <path d="M 0 0 C 6 -3, 12 3, 8 10 C 3 14, -4 10, 0 0 Z" fill="#ff7597" />
   </g>
-  <!-- Petal 2 (Mid-left) -->
-  <g class="p-fall-2" transform="translate(320, 0)" filter="url(#petalGlow)">
+  <g class="p-fall-2" transform="translate(300, 0)" filter="url(#sakuraGlowDark)">
     <path d="M 0 0 C 5 -4, 11 2, 7 8 C 2 12, -3 9, 0 0 Z" fill="#ffa8c5" />
   </g>
-  <!-- Petal 3 (Center) -->
-  <g class="p-fall-3" transform="translate(470, 0)" filter="url(#petalGlow)">
+  <g class="p-fall-3" transform="translate(450, 0)" filter="url(#sakuraGlowDark)">
     <path d="M 0 0 C 7 -2, 13 4, 9 11 C 4 15, -3 11, 0 0 Z" fill="#ff4d8d" />
   </g>
-  <!-- Petal 4 (Right-center) -->
-  <g class="p-fall-4" transform="translate(580, 0)" filter="url(#petalGlow)">
+  <g class="p-fall-4" transform="translate(560, 0)" filter="url(#sakuraGlowDark)">
     <path d="M 0 0 C 6 -3, 11 3, 7 9 C 2 13, -4 9, 0 0 Z" fill="#ff7597" />
   </g>
-  <!-- Petal 5 (Far Right) -->
-  <g class="p-fall-5" transform="translate(760, 0)" filter="url(#petalGlow)">
+  <g class="p-fall-5" transform="translate(720, 0)" filter="url(#sakuraGlowDark)">
     <path d="M 0 0 C 5 -3, 10 2, 6 7 C 2 11, -3 8, 0 0 Z" fill="#ffaec5" />
   </g>
-  <!-- Petal 6 (Far Left) -->
-  <g class="p-fall-6" transform="translate(90, 0)" filter="url(#petalGlow)">
+  <g class="p-fall-6" transform="translate(80, 0)" filter="url(#sakuraGlowDark)">
     <path d="M 0 0 C 7 -3, 12 4, 8 10 C 3 14, -3 10, 0 0 Z" fill="#ff4d8d" />
   </g>
-  <!-- Petal 7 (Fan area) -->
-  <g class="p-fall-7" transform="translate(680, 0)" filter="url(#petalGlow)">
-    <path d="M 0 0 C 6 -4, 12 2, 8 8 C 3 12, -3 9, 0 0 Z" fill="#ff7597" />
+
+  <!-- ================= AUTHENTIC SUMI-E CHERRY BLOSSOM BRANCH ================= -->
+  <g transform="translate(520, 10)">
+    <!-- Main Gnarled Ink Tree Branch -->
+    <path d="M 320 0 Q 240 25 180 30 T 70 85 Q 20 100 -20 90" stroke="#1f1118" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M 320 0 Q 240 25 180 30 T 70 85 Q 20 100 -20 90" stroke="#3d1b2a" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.8" />
+    <!-- Twigs & Branchlets -->
+    <path d="M 190 30 Q 150 15 120 20" stroke="#25121b" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 140 50 Q 110 65 75 60" stroke="#25121b" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <path d="M 90 80 Q 60 110 30 115" stroke="#25121b" stroke-width="2" stroke-linecap="round" fill="none" />
+    <path d="M 230 20 Q 250 40 270 50" stroke="#25121b" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 200 70 Q 220 95 240 105" stroke="#25121b" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Sakura Blossom Clusters along Branch -->
+    <!-- Cluster 1 (Left tip) -->
+    <g transform="translate(-15, 90)">
+      <circle cx="-5" cy="-4" r="5.5" fill="#ff7597" opacity="0.9" />
+      <circle cx="5" cy="-4" r="5.5" fill="#ff7597" opacity="0.9" />
+      <circle cx="-6" cy="5" r="5.5" fill="#ff4d8d" opacity="0.9" />
+      <circle cx="6" cy="5" r="5.5" fill="#ff4d8d" opacity="0.9" />
+      <circle cx="0" cy="7" r="5.5" fill="#ff2a75" opacity="0.9" />
+      <circle cx="0" cy="1" r="2.2" fill="#fff" />
+    </g>
+    <!-- Cluster 2 -->
+    <g transform="translate(60, 65) scale(1.15)">
+      <circle cx="-6" cy="-4" r="5.5" fill="#ffa0bd" opacity="0.95" />
+      <circle cx="6" cy="-4" r="5.5" fill="#ffa0bd" opacity="0.95" />
+      <circle cx="-6" cy="6" r="5.5" fill="#ff6394" opacity="0.95" />
+      <circle cx="6" cy="6" r="5.5" fill="#ff6394" opacity="0.95" />
+      <circle cx="0" cy="8" r="5.5" fill="#ff2a75" opacity="0.95" />
+      <circle cx="0" cy="1.5" r="2.5" fill="#fff" />
+    </g>
+    <!-- Cluster 3 -->
+    <g transform="translate(130, 35) scale(1.2)">
+      <circle cx="-6" cy="-5" r="6" fill="#ff7597" />
+      <circle cx="6" cy="-5" r="6" fill="#ff7597" />
+      <circle cx="-7" cy="6" r="6" fill="#ff4d8d" />
+      <circle cx="7" cy="6" r="6" fill="#ff4d8d" />
+      <circle cx="0" cy="8" r="6" fill="#ff2a75" />
+      <circle cx="0" cy="1" r="2.5" fill="#fff" />
+    </g>
+    <!-- Cluster 4 -->
+    <g transform="translate(210, 25) scale(1.3)">
+      <circle cx="-6" cy="-5" r="6" fill="#ffa8c5" />
+      <circle cx="6" cy="-5" r="6" fill="#ffa8c5" />
+      <circle cx="-7" cy="6" r="6" fill="#ff6394" />
+      <circle cx="7" cy="6" r="6" fill="#ff6394" />
+      <circle cx="0" cy="9" r="6" fill="#ff2a75" />
+      <circle cx="0" cy="2" r="2.8" fill="#fff" />
+    </g>
+    <!-- Cluster 5 (Right upper) -->
+    <g transform="translate(270, 48) scale(1.1)">
+      <circle cx="-5" cy="-4" r="5.5" fill="#ff7597" />
+      <circle cx="5" cy="-4" r="5.5" fill="#ff7597" />
+      <circle cx="-6" cy="5" r="5.5" fill="#ff4d8d" />
+      <circle cx="6" cy="5" r="5.5" fill="#ff4d8d" />
+      <circle cx="0" cy="7" r="5.5" fill="#ff2a75" />
+      <circle cx="0" cy="1" r="2" fill="#fff" />
+    </g>
   </g>
 
-  <!-- ================= LEFT CONTENT ================= -->
-  <!-- Top System Badge: SANTHIYA.EXE -->
-  <g transform="translate(45, 26)">
-    <rect x="0" y="0" width="168" height="24" rx="12" fill="#ff2a75" fill-opacity="0.14" stroke="#ff7597" stroke-opacity="0.45" stroke-width="1" />
-    <circle cx="12" cy="12" r="4" fill="#ff2a75" filter="url(#petalGlow)" />
-    <text x="24" y="16" font-family="'Consolas', monospace" font-size="10.5" font-weight="700" fill="#ffa8c5" letter-spacing="1">SANTHIYA.EXE // ONLINE</text>
+  <!-- ================= TWO JAPANESE HANGING LANTERNS (TŌRŌ) ================= -->
+  <!-- Lantern 1 (Left - Hanging from x=640, y=35) -->
+  <g class="lantern-left">
+    <!-- Hanging cord -->
+    <line x1="640" y1="35" x2="640" y2="120" stroke="#ff7597" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.8" />
+    <circle cx="640" cy="120" r="3.5" fill="#ff2a75" />
+    
+    <!-- Pagoda Roof (Curved Japanese eaves) -->
+    <g transform="translate(640, 122)">
+      <!-- Top Finial / Ring -->
+      <circle cx="0" cy="-6" r="4.5" fill="none" stroke="#ffa8c5" stroke-width="1.8" />
+      <!-- Roof Cap -->
+      <path d="M -32 6 Q 0 -6 32 6 L 24 10 L -24 10 Z" fill="#1b121c" stroke="#ff7597" stroke-width="1.2" />
+      
+      <!-- Lantern Chamber (Glow Frame) -->
+      <rect x="-22" y="10" width="44" height="52" rx="4" fill="#08090f" stroke="#ff7597" stroke-width="1.4" />
+      <!-- Paper Light Chamber with Warm Fire Glow -->
+      <rect x="-18" y="14" width="36" height="44" rx="2" fill="url(#lanternFire)" class="lantern-glow-core" />
+      
+      <!-- Chamber Lattice Grille (Traditional Kumiko) -->
+      <line x1="0" y1="10" x2="0" y2="62" stroke="#25121b" stroke-width="1.6" />
+      <line x1="-22" y1="36" x2="22" y2="36" stroke="#25121b" stroke-width="1.4" />
+      <!-- Painted Sakura Silhouette inside Lantern -->
+      <circle cx="-5" cy="30" r="3" fill="#ff4a79" opacity="0.6" />
+      <circle cx="6" cy="42" r="3.5" fill="#ff4a79" opacity="0.6" />
+      <path d="M -8 46 Q 0 35 8 26" stroke="#3d1525" stroke-width="1.2" fill="none" opacity="0.7" />
+
+      <!-- Lantern Base -->
+      <path d="M -26 62 L 26 62 L 18 68 L -18 68 Z" fill="#1b121c" stroke="#ff7597" stroke-width="1.2" />
+      <circle cx="0" cy="72" r="4" fill="#ff2a75" />
+
+      <!-- Hanging Silk Tassel -->
+      <line x1="0" y1="76" x2="0" y2="98" stroke="#ff2a75" stroke-width="2.5" stroke-linecap="round" />
+      <ellipse cx="0" cy="100" rx="3.5" ry="6" fill="#ff4a79" />
+      <line x1="-2" y1="105" x2="-3" y2="120" stroke="#ffa8c5" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="0" y1="106" x2="0" y2="122" stroke="#ffa8c5" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="2" y1="105" x2="3" y2="120" stroke="#ffa8c5" stroke-width="1.5" stroke-linecap="round" />
+    </g>
   </g>
 
-  <!-- Main Title -->
-  <text x="45" y="86" class="title-text">
+  <!-- Lantern 2 (Right - Smaller, Hanging Lower from x=760, y=85) -->
+  <g class="lantern-right">
+    <!-- Hanging cord -->
+    <line x1="760" y1="85" x2="760" y2="180" stroke="#ff7597" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.8" />
+    <circle cx="760" cy="180" r="3" fill="#ff2a75" />
+    
+    <!-- Pagoda Roof -->
+    <g transform="translate(760, 182) scale(0.85)">
+      <!-- Top Ring -->
+      <circle cx="0" cy="-6" r="4" fill="none" stroke="#ffa8c5" stroke-width="1.6" />
+      <!-- Roof Cap -->
+      <path d="M -28 5 Q 0 -5 28 5 L 20 9 L -20 9 Z" fill="#1b121c" stroke="#ff7597" stroke-width="1.2" />
+      
+      <!-- Chamber Frame -->
+      <rect x="-19" y="9" width="38" height="46" rx="3" fill="#08090f" stroke="#ff7597" stroke-width="1.4" />
+      <!-- Paper Light with Warm Fire Glow -->
+      <rect x="-15" y="13" width="30" height="38" rx="2" fill="url(#lanternFire)" class="lantern-glow-core" />
+      
+      <!-- Grille -->
+      <line x1="0" y1="9" x2="0" y2="55" stroke="#25121b" stroke-width="1.5" />
+      <line x1="-19" y1="32" x2="19" y2="32" stroke="#25121b" stroke-width="1.2" />
+      <circle cx="4" cy="26" r="3" fill="#ff4a79" opacity="0.6" />
+
+      <!-- Base -->
+      <path d="M -22 55 L 22 55 L 15 60 L -15 60 Z" fill="#1b121c" stroke="#ff7597" stroke-width="1.2" />
+      <circle cx="0" cy="64" r="3.5" fill="#ff2a75" />
+
+      <!-- Tassel -->
+      <line x1="0" y1="67" x2="0" y2="86" stroke="#ff2a75" stroke-width="2.2" stroke-linecap="round" />
+      <ellipse cx="0" cy="88" rx="3" ry="5" fill="#ff4a79" />
+      <line x1="-2" y1="92" x2="-2.5" y2="105" stroke="#ffa8c5" stroke-width="1.4" stroke-linecap="round" />
+      <line x1="0" y1="93" x2="0" y2="107" stroke="#ffa8c5" stroke-width="1.4" stroke-linecap="round" />
+      <line x1="2" y1="92" x2="2.5" y2="105" stroke="#ffa8c5" stroke-width="1.4" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Traditional Red Hanko Seal Stamp (桜 / SAKURA) in bottom-right corner -->
+  <g transform="translate(775, 310)">
+    <rect x="0" y="0" width="36" height="36" rx="4" fill="#a81938" stroke="#ff4d73" stroke-width="1.5" opacity="0.9" />
+    <!-- Traditional Seal Kanji: 桜 (Sakura) stylized -->
+    <text x="18" y="24" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'MS Mincho', serif" font-size="20" font-weight="900" fill="#fff3f7" text-anchor="middle">桜</text>
+  </g>
+
+  <!-- ================= LEFT SIDE: HERO CONTENT ================= -->
+  <!-- Top System Badge: SANTHIYA.EXE with Japanese greeting -->
+  <g transform="translate(45, 28)">
+    <rect x="0" y="0" width="190" height="26" rx="13" fill="#ff2a75" fill-opacity="0.14" stroke="#ff7597" stroke-opacity="0.5" stroke-width="1" />
+    <circle cx="13" cy="13" r="4.5" fill="#ff2a75" filter="url(#sakuraGlowDark)" />
+    <text x="26" y="17.5" font-family="'Consolas', monospace" font-size="10.5" font-weight="700" fill="#ffa8c5" letter-spacing="1">🌸 ようこそ // SANTHIYA.EXE</text>
+  </g>
+
+  <!-- Main Title with Japanese Kana -->
+  <text x="45" y="92" class="title-text">
     Hi, I'm <tspan class="highlight-name">Santhiya B</tspan> 🌸
   </text>
+  <text x="45" y="112" font-family="'Yu Mincho', serif" font-size="12" fill="#ff8fae" letter-spacing="3">サンティヤ &#8226; ELECTRONICS &amp; VLSI</text>
 
-  <!-- Subtitle (From Portfolio) -->
-  <text x="45" y="116" class="subtitle-text">
-    ECE Student <tspan fill="#ff2a75">|</tspan> VLSI Enthusiast
+  <!-- Subtitle -->
+  <text x="45" y="138" class="subtitle-text">
+    ECE Student <tspan fill="#ff2a75">|</tspan> VLSI Frontend Enthusiast
   </text>
-  <text x="45" y="138" class="tagline-text">
-    Building at the intersection of electronics, hardware architecture, and software development.
+  <text x="45" y="158" class="tagline-text">
+    Building at the intersection of electronics, hardware architecture, and software systems.
   </text>
 
   <!-- Terminal Status Window (From Portfolio) -->
-  <g transform="translate(45, 156)">
-    <rect x="0" y="0" width="460" height="96" rx="10" fill="#040508" fill-opacity="0.88" stroke="#ff7597" stroke-opacity="0.25" stroke-width="1" />
+  <g transform="translate(45, 178)">
+    <rect x="0" y="0" width="460" height="98" rx="10" fill="#040508" fill-opacity="0.9" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
     
     <!-- Terminal Header Dots -->
     <circle cx="16" cy="14" r="3.5" fill="#ff2a75" />
@@ -247,12 +359,12 @@
       <tspan class="term-prompt">&gt; FIELD:</tspan> ELECTRONICS &amp; COMMUNICATION (CGPA: 9.23)
     </text>
     <text x="16" y="78" class="term-line">
-      <tspan class="term-prompt">&gt; INTEREST:</tspan> VLSI &amp; WEB DEVELOPMENT<tspan class="cursor-blink">_</tspan>
+      <tspan class="term-prompt">&gt; FOCUS:</tspan> VLSI FRONTEND &amp; WEB DEVELOPMENT<tspan class="cursor-blink">_</tspan>
     </text>
   </g>
 
   <!-- Status Pills Row -->
-  <g transform="translate(45, 274)">
+  <g transform="translate(45, 302)">
     <!-- Pill 1: Degree & CGPA -->
     <rect x="0" y="0" width="180" height="30" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
     <text x="14" y="19" class="pill-text">🎓 B.Tech ECE &#8226; <tspan fill="#ff7597" font-weight="700">9.23 CGPA</tspan></text>
@@ -264,82 +376,5 @@
     <!-- Pill 3: Location -->
     <rect x="388" y="0" width="120" height="30" rx="8" fill="#ffffff" fill-opacity="0.04" stroke="#ff7597" stroke-opacity="0.3" stroke-width="1" />
     <text x="400" y="19" class="pill-text">📍 Tamil Nadu</text>
-  </g>
-
-  <!-- ================= RIGHT SIDE: TRADITIONAL SAKURA FAN (NO VLSI BOX!) ================= -->
-  <g transform="translate(685, 155)" class="fan-group">
-    <!-- Fan Outer Glow Aura -->
-    <circle cx="0" cy="0" r="95" fill="#ff2a75" fill-opacity="0.22" filter="blur(18px)" />
-    
-    <!-- Fan Leaf Arc -->
-    <path d="M -85 10 A 95 95 0 0 1 85 10 L 0 28 Z" fill="url(#fanGrad)" stroke="#ff94b8" stroke-width="1.6" />
-    
-    <!-- Fan Ribs / Spines -->
-    <line x1="0" y1="28" x2="-75" y2="-22" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
-    <line x1="0" y1="28" x2="-52" y2="-52" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
-    <line x1="0" y1="28" x2="-25" y2="-72" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
-    <line x1="0" y1="28" x2="0" y2="-78" stroke="#ffd0df" stroke-width="1.4" stroke-opacity="0.8" />
-    <line x1="0" y1="28" x2="25" y2="-72" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
-    <line x1="0" y1="28" x2="52" y2="-52" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
-    <line x1="0" y1="28" x2="75" y2="-22" stroke="#ffd0df" stroke-width="1.2" stroke-opacity="0.6" />
-
-    <!-- Pure Cherry Blossom Floral Silhouette on the Fan Face (NO CHIP, NO BOX!) -->
-    <g transform="translate(0, -25)">
-      <!-- Branch curved across fan -->
-      <path d="M -42 12 Q -18 -8 5 -5 T 45 -20" stroke="#ffe5ed" stroke-width="2.6" stroke-linecap="round" fill="none" opacity="0.95" />
-      <path d="M -8 -6 Q -12 -22 -6 -32" stroke="#ffe5ed" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.9" />
-      <path d="M 18 -10 Q 25 -24 35 -26" stroke="#ffe5ed" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.9" />
-
-      <!-- Center Big Sakura Blossom -->
-      <g transform="translate(5, -5) scale(1.1)">
-        <circle cx="0" cy="-6" r="4.2" fill="#ffffff" />
-        <circle cx="6" cy="-2" r="4.2" fill="#ffa8c5" />
-        <circle cx="4" cy="5" r="4.2" fill="#ff7597" />
-        <circle cx="-4" cy="5" r="4.2" fill="#ff7597" />
-        <circle cx="-6" cy="-2" r="4.2" fill="#ffa8c5" />
-        <circle cx="0" cy="0" r="2.2" fill="#ff2a75" />
-      </g>
-
-      <!-- Blossom 2 (Left) -->
-      <g transform="translate(-25, 4) scale(0.9)">
-        <circle cx="0" cy="-5" r="3.8" fill="#ffffff" />
-        <circle cx="5" cy="-2" r="3.8" fill="#ffaec5" />
-        <circle cx="3" cy="4" r="3.8" fill="#ff7597" />
-        <circle cx="-3" cy="4" r="3.8" fill="#ff7597" />
-        <circle cx="-5" cy="-2" r="3.8" fill="#ffaec5" />
-        <circle cx="0" cy="0" r="1.8" fill="#ff2a75" />
-      </g>
-
-      <!-- Blossom 3 (Upper Branch) -->
-      <g transform="translate(-6, -32) scale(0.85)">
-        <circle cx="0" cy="-5" r="3.5" fill="#ffffff" />
-        <circle cx="5" cy="-2" r="3.5" fill="#ffa8c5" />
-        <circle cx="3" cy="4" r="3.5" fill="#ff7597" />
-        <circle cx="-3" cy="4" r="3.5" fill="#ff7597" />
-        <circle cx="-5" cy="-2" r="3.5" fill="#ffa8c5" />
-        <circle cx="0" cy="0" r="1.6" fill="#ff2a75" />
-      </g>
-
-      <!-- Blossom 4 (Right Tip) -->
-      <g transform="translate(42, -22) scale(0.8)">
-        <circle cx="0" cy="-5" r="3.2" fill="#ffffff" />
-        <circle cx="5" cy="-2" r="3.2" fill="#ffa8c5" />
-        <circle cx="3" cy="4" r="3.2" fill="#ff7597" />
-        <circle cx="-3" cy="4" r="3.2" fill="#ff7597" />
-        <circle cx="-5" cy="-2" r="3.2" fill="#ffa8c5" />
-        <circle cx="0" cy="0" r="1.5" fill="#ff2a75" />
-      </g>
-    </g>
-
-    <!-- Fan Pivot / Rivet -->
-    <circle cx="0" cy="28" r="7" fill="#ffeaf1" stroke="#ff2a75" stroke-width="2.2" />
-    <circle cx="0" cy="28" r="3" fill="#ff2a75" />
-
-    <!-- Hanging Silk Tassel with Animated Sway -->
-    <g class="tassel-group">
-      <path d="M 0 35 L 0 62" stroke="#ff4d8d" stroke-width="3.2" stroke-linecap="round" />
-      <ellipse cx="0" cy="65" rx="5" ry="8" fill="#ff2a75" />
-      <path d="M -4 72 L -6 92 M 0 73 L 0 94 M 4 72 L 6 92" stroke="#ffa3c4" stroke-width="2" stroke-linecap="round" />
-    </g>
   </g>
 </svg>

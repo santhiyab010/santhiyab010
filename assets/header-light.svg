@@ -1,0 +1,365 @@
+<svg viewBox="0 0 850 380" width="100%" height="380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient (Traditional Japanese Washi Paper in Light Blush) -->
+    <linearGradient id="bgLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8fa" />
+      <stop offset="50%" stop-color="#ffeef3" />
+      <stop offset="100%" stop-color="#fedce5" />
+    </linearGradient>
+
+    <!-- Crimson & Deep Sakura Accent Gradient -->
+    <linearGradient id="pinkAccentLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c2185b" />
+      <stop offset="50%" stop-color="#e91e63" />
+      <stop offset="100%" stop-color="#ff4081" />
+    </linearGradient>
+
+    <!-- Warm Lantern Fire Gradient (Light Mode) -->
+    <radialGradient id="lanternFireLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff9e6" stop-opacity="1" />
+      <stop offset="40%" stop-color="#ffd57a" stop-opacity="0.95" />
+      <stop offset="80%" stop-color="#ff7b9f" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#e91e63" stop-opacity="0.1" />
+    </radialGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="borderLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f48fb1" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#f06292" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ec407a" stop-opacity="0.7" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="sakuraGlowLight" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    /* Swaying Lantern Animation */
+    @keyframes swayLeft {
+      0%, 100% { transform: rotate(-3.5deg); }
+      50% { transform: rotate(3.5deg); }
+    }
+    @keyframes swayRight {
+      0%, 100% { transform: rotate(3deg); }
+      50% { transform: rotate(-3deg); }
+    }
+    @keyframes lanternFlickerLight {
+      0%, 100% { opacity: 0.9; filter: drop-shadow(0 0 8px rgba(255, 180, 70, 0.5)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 18px rgba(255, 180, 70, 0.85)); }
+    }
+
+    /* Continuous Top-to-Bottom Falling Sakura Petals */
+    @keyframes fallPetal1 {
+      0% { transform: translate(0px, -40px) rotate(0deg); opacity: 0; }
+      15% { opacity: 0.95; }
+      85% { opacity: 0.8; }
+      100% { transform: translate(-100px, 400px) rotate(340deg); opacity: 0; }
+    }
+    @keyframes fallPetal2 {
+      0% { transform: translate(0px, -40px) rotate(0deg); opacity: 0; }
+      20% { opacity: 0.9; }
+      80% { opacity: 0.75; }
+      100% { transform: translate(80px, 400px) rotate(-300deg); opacity: 0; }
+    }
+    @keyframes fallPetal3 {
+      0% { transform: translate(0px, -40px) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.95; }
+      90% { opacity: 0.8; }
+      100% { transform: translate(-70px, 400px) rotate(260deg); opacity: 0; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .title-text-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 34px;
+      fill: #221520;
+      letter-spacing: -0.5px;
+    }
+    .highlight-name-light {
+      fill: url(#pinkAccentLight);
+    }
+    .subtitle-text-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14.5px;
+      font-weight: 700;
+      fill: #ad1457;
+      letter-spacing: 0.5px;
+    }
+    .tagline-text-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      fill: #61505c;
+    }
+    .term-line-light {
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 11px;
+      fill: #3e2e39;
+    }
+    .term-prompt-light {
+      fill: #c2185b;
+      font-weight: bold;
+    }
+    .cursor-blink-light {
+      animation: blink 0.9s infinite;
+      fill: #c2185b;
+    }
+    .pill-text-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      fill: #442a3a;
+    }
+
+    .lantern-left-light {
+      animation: swayLeft 4.5s infinite ease-in-out;
+      transform-origin: 640px 30px;
+    }
+    .lantern-right-light {
+      animation: swayRight 5.2s infinite ease-in-out;
+      transform-origin: 760px 80px;
+    }
+    .lantern-glow-light {
+      animation: lanternFlickerLight 3s infinite ease-in-out;
+    }
+
+    .p-fall-1 { animation: fallPetal1 7s infinite linear; }
+    .p-fall-2 { animation: fallPetal2 8.5s infinite linear; animation-delay: 2s; }
+    .p-fall-3 { animation: fallPetal3 6.5s infinite linear; animation-delay: 3.5s; }
+    .p-fall-4 { animation: fallPetal1 9s infinite linear; animation-delay: 1.2s; }
+    .p-fall-5 { animation: fallPetal2 7.8s infinite linear; animation-delay: 4.8s; }
+    .p-fall-6 { animation: fallPetal3 8.2s infinite linear; animation-delay: 0.8s; }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="846" height="376" rx="20" fill="url(#bgLight)" stroke="url(#borderLight)" stroke-width="1.5" />
+
+  <!-- Soft Watercolor Sakura Washes in Background -->
+  <circle cx="680" cy="140" r="140" fill="#f8bbd0" fill-opacity="0.35" filter="blur(40px)" />
+  <circle cx="720" cy="190" r="75" fill="#ffe082" fill-opacity="0.3" filter="blur(25px)" />
+  <circle cx="100" cy="300" r="80" fill="#f48fb1" fill-opacity="0.2" filter="blur(25px)" />
+
+  <!-- ================= TOP-TO-BOTTOM FALLING SAKURA PETALS ================= -->
+  <g class="p-fall-1" transform="translate(160, 0)">
+    <path d="M 0 0 C 6 -3, 12 3, 8 10 C 3 14, -4 10, 0 0 Z" fill="#e91e63" opacity="0.75" />
+  </g>
+  <g class="p-fall-2" transform="translate(300, 0)">
+    <path d="M 0 0 C 5 -4, 11 2, 7 8 C 2 12, -3 9, 0 0 Z" fill="#ec407a" opacity="0.75" />
+  </g>
+  <g class="p-fall-3" transform="translate(450, 0)">
+    <path d="M 0 0 C 7 -2, 13 4, 9 11 C 4 15, -3 11, 0 0 Z" fill="#c2185b" opacity="0.65" />
+  </g>
+  <g class="p-fall-4" transform="translate(560, 0)">
+    <path d="M 0 0 C 6 -3, 11 3, 7 9 C 2 13, -4 9, 0 0 Z" fill="#e91e63" opacity="0.7" />
+  </g>
+  <g class="p-fall-5" transform="translate(720, 0)">
+    <path d="M 0 0 C 5 -3, 10 2, 6 7 C 2 11, -3 8, 0 0 Z" fill="#f06292" opacity="0.8" />
+  </g>
+  <g class="p-fall-6" transform="translate(80, 0)">
+    <path d="M 0 0 C 7 -3, 12 4, 8 10 C 3 14, -3 10, 0 0 Z" fill="#ad1457" opacity="0.7" />
+  </g>
+
+  <!-- ================= AUTHENTIC SUMI-E CHERRY BLOSSOM BRANCH ================= -->
+  <g transform="translate(520, 10)">
+    <!-- Main Gnarled Ink Tree Branch (Deep Sumi-e Black) -->
+    <path d="M 320 0 Q 240 25 180 30 T 70 85 Q 20 100 -20 90" stroke="#1c1018" stroke-width="8" stroke-linecap="round" fill="none" />
+    <path d="M 320 0 Q 240 25 180 30 T 70 85 Q 20 100 -20 90" stroke="#38212e" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7" />
+    <!-- Twigs -->
+    <path d="M 190 30 Q 150 15 120 20" stroke="#23141f" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 140 50 Q 110 65 75 60" stroke="#23141f" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <path d="M 90 80 Q 60 110 30 115" stroke="#23141f" stroke-width="2" stroke-linecap="round" fill="none" />
+    <path d="M 230 20 Q 250 40 270 50" stroke="#23141f" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 200 70 Q 220 95 240 105" stroke="#23141f" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Blooming Pink Watercolor Petals & Flowers -->
+    <g transform="translate(-15, 90)">
+      <circle cx="-5" cy="-4" r="5.5" fill="#f48fb1" opacity="0.95" />
+      <circle cx="5" cy="-4" r="5.5" fill="#f48fb1" opacity="0.95" />
+      <circle cx="-6" cy="5" r="5.5" fill="#ec407a" opacity="0.95" />
+      <circle cx="6" cy="5" r="5.5" fill="#ec407a" opacity="0.95" />
+      <circle cx="0" cy="7" r="5.5" fill="#d81b60" opacity="0.95" />
+      <circle cx="0" cy="1" r="2.2" fill="#fff" />
+    </g>
+    <g transform="translate(60, 65) scale(1.15)">
+      <circle cx="-6" cy="-4" r="5.5" fill="#f8bbd0" />
+      <circle cx="6" cy="-4" r="5.5" fill="#f8bbd0" />
+      <circle cx="-6" cy="6" r="5.5" fill="#ec407a" />
+      <circle cx="6" cy="6" r="5.5" fill="#ec407a" />
+      <circle cx="0" cy="8" r="5.5" fill="#c2185b" />
+      <circle cx="0" cy="1.5" r="2.5" fill="#fff" />
+    </g>
+    <g transform="translate(130, 35) scale(1.2)">
+      <circle cx="-6" cy="-5" r="6" fill="#f48fb1" />
+      <circle cx="6" cy="-5" r="6" fill="#f48fb1" />
+      <circle cx="-7" cy="6" r="6" fill="#e91e63" />
+      <circle cx="7" cy="6" r="6" fill="#e91e63" />
+      <circle cx="0" cy="8" r="6" fill="#ad1457" />
+      <circle cx="0" cy="1" r="2.5" fill="#fff" />
+    </g>
+    <g transform="translate(210, 25) scale(1.3)">
+      <circle cx="-6" cy="-5" r="6" fill="#f8bbd0" />
+      <circle cx="6" cy="-5" r="6" fill="#f8bbd0" />
+      <circle cx="-7" cy="6" r="6" fill="#ec407a" />
+      <circle cx="7" cy="6" r="6" fill="#ec407a" />
+      <circle cx="0" cy="9" r="6" fill="#c2185b" />
+      <circle cx="0" cy="2" r="2.8" fill="#fff" />
+    </g>
+    <g transform="translate(270, 48) scale(1.1)">
+      <circle cx="-5" cy="-4" r="5.5" fill="#f48fb1" />
+      <circle cx="5" cy="-4" r="5.5" fill="#f48fb1" />
+      <circle cx="-6" cy="5" r="5.5" fill="#e91e63" />
+      <circle cx="6" cy="5" r="5.5" fill="#e91e63" />
+      <circle cx="0" cy="7" r="5.5" fill="#ad1457" />
+      <circle cx="0" cy="1" r="2" fill="#fff" />
+    </g>
+  </g>
+
+  <!-- ================= TWO JAPANESE HANGING LANTERNS (SUMI-E BLACK & WARM LIGHT) ================= -->
+  <!-- Lantern 1 (Left - Hanging from x=640, y=35) -->
+  <g class="lantern-left-light">
+    <!-- Hanging cord -->
+    <line x1="640" y1="35" x2="640" y2="120" stroke="#1f1118" stroke-width="1.4" />
+    <circle cx="640" cy="120" r="3.5" fill="#c2185b" />
+    
+    <!-- Pagoda Roof -->
+    <g transform="translate(640, 122)">
+      <!-- Top Ring -->
+      <circle cx="0" cy="-6" r="4.5" fill="none" stroke="#22121e" stroke-width="2" />
+      <!-- Roof Cap -->
+      <path d="M -32 6 Q 0 -6 32 6 L 24 10 L -24 10 Z" fill="#1c1018" stroke="#000" stroke-width="1" />
+      
+      <!-- Lantern Chamber Frame -->
+      <rect x="-22" y="10" width="44" height="52" rx="4" fill="#20111d" stroke="#000" stroke-width="1.2" />
+      <!-- Paper Light with Warm Glow -->
+      <rect x="-18" y="14" width="36" height="44" rx="2" fill="url(#lanternFireLight)" class="lantern-glow-light" />
+      
+      <!-- Chamber Lattice Grille -->
+      <line x1="0" y1="10" x2="0" y2="62" stroke="#231320" stroke-width="1.6" />
+      <line x1="-22" y1="36" x2="22" y2="36" stroke="#231320" stroke-width="1.4" />
+      <!-- Painted Sakura inside Lantern -->
+      <circle cx="-5" cy="30" r="3" fill="#e91e63" opacity="0.65" />
+      <circle cx="6" cy="42" r="3.5" fill="#e91e63" opacity="0.65" />
+      <path d="M -8 46 Q 0 35 8 26" stroke="#231320" stroke-width="1.2" fill="none" opacity="0.8" />
+
+      <!-- Base -->
+      <path d="M -26 62 L 26 62 L 18 68 L -18 68 Z" fill="#1c1018" stroke="#000" stroke-width="1" />
+      <circle cx="0" cy="72" r="4" fill="#c2185b" />
+
+      <!-- Hanging Silk Tassel -->
+      <line x1="0" y1="76" x2="0" y2="98" stroke="#c2185b" stroke-width="2.5" stroke-linecap="round" />
+      <ellipse cx="0" cy="100" rx="3.5" ry="6" fill="#ad1457" />
+      <line x1="-2" y1="105" x2="-3" y2="120" stroke="#d81b60" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="0" y1="106" x2="0" y2="122" stroke="#d81b60" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="2" y1="105" x2="3" y2="120" stroke="#d81b60" stroke-width="1.5" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Lantern 2 (Right - Smaller) -->
+  <g class="lantern-right-light">
+    <!-- Hanging cord -->
+    <line x1="760" y1="85" x2="760" y2="180" stroke="#1f1118" stroke-width="1.4" />
+    <circle cx="760" cy="180" r="3" fill="#c2185b" />
+    
+    <!-- Pagoda Roof -->
+    <g transform="translate(760, 182) scale(0.85)">
+      <!-- Top Ring -->
+      <circle cx="0" cy="-6" r="4" fill="none" stroke="#22121e" stroke-width="2" />
+      <!-- Roof Cap -->
+      <path d="M -28 5 Q 0 -5 28 5 L 20 9 L -20 9 Z" fill="#1c1018" stroke="#000" stroke-width="1" />
+      
+      <!-- Chamber Frame -->
+      <rect x="-19" y="9" width="38" height="46" rx="3" fill="#20111d" stroke="#000" stroke-width="1.2" />
+      <!-- Paper Light with Warm Glow -->
+      <rect x="-15" y="13" width="30" height="38" rx="2" fill="url(#lanternFireLight)" class="lantern-glow-light" />
+      
+      <!-- Grille -->
+      <line x1="0" y1="9" x2="0" y2="55" stroke="#231320" stroke-width="1.5" />
+      <line x1="-19" y1="32" x2="19" y2="32" stroke="#231320" stroke-width="1.2" />
+      <circle cx="4" cy="26" r="3" fill="#e91e63" opacity="0.65" />
+
+      <!-- Base -->
+      <path d="M -22 55 L 22 55 L 15 60 L -15 60 Z" fill="#1c1018" stroke="#000" stroke-width="1" />
+      <circle cx="0" cy="64" r="3.5" fill="#c2185b" />
+
+      <!-- Tassel -->
+      <line x1="0" y1="67" x2="0" y2="86" stroke="#c2185b" stroke-width="2.2" stroke-linecap="round" />
+      <ellipse cx="0" cy="88" rx="3" ry="5" fill="#ad1457" />
+      <line x1="-2" y1="92" x2="-2.5" y2="105" stroke="#d81b60" stroke-width="1.4" stroke-linecap="round" />
+      <line x1="0" y1="93" x2="0" y2="107" stroke="#d81b60" stroke-width="1.4" stroke-linecap="round" />
+      <line x1="2" y1="92" x2="2.5" y2="105" stroke="#d81b60" stroke-width="1.4" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Traditional Red Hanko Seal Stamp (桜) -->
+  <g transform="translate(775, 310)">
+    <rect x="0" y="0" width="36" height="36" rx="4" fill="#c2185b" stroke="#880e4f" stroke-width="1.5" />
+    <text x="18" y="24" font-family="'Yu Mincho', 'Hiragino Mincho ProN', 'MS Mincho', serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">桜</text>
+  </g>
+
+  <!-- ================= LEFT SIDE: HERO CONTENT (LIGHT THEME) ================= -->
+  <!-- Top System Badge: SANTHIYA.EXE -->
+  <g transform="translate(45, 28)">
+    <rect x="0" y="0" width="190" height="26" rx="13" fill="#ffffff" stroke="#f06292" stroke-width="1.2" />
+    <circle cx="13" cy="13" r="4.5" fill="#c2185b" />
+    <text x="26" y="17.5" font-family="'Consolas', monospace" font-size="10.5" font-weight="700" fill="#ad1457" letter-spacing="1">🌸 ようこそ // SANTHIYA.EXE</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="45" y="92" class="title-text-light">
+    Hi, I'm <tspan class="highlight-name-light">Santhiya B</tspan> 🌸
+  </text>
+  <text x="45" y="112" font-family="'Yu Mincho', serif" font-size="12" fill="#ad1457" letter-spacing="3">サンティヤ &#8226; ELECTRONICS &amp; VLSI</text>
+
+  <!-- Subtitle -->
+  <text x="45" y="138" class="subtitle-text-light">
+    ECE Student <tspan fill="#d81b60">|</tspan> VLSI Frontend Enthusiast
+  </text>
+  <text x="45" y="158" class="tagline-text-light">
+    Building at the intersection of electronics, hardware architecture, and software systems.
+  </text>
+
+  <!-- Terminal Status Window (Light Japanese Paper Terminal) -->
+  <g transform="translate(45, 178)">
+    <rect x="0" y="0" width="460" height="98" rx="10" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+    
+    <!-- Terminal Header Dots -->
+    <circle cx="16" cy="14" r="3.5" fill="#e91e63" />
+    <circle cx="28" cy="14" r="3.5" fill="#f06292" opacity="0.6" />
+    <circle cx="40" cy="14" r="3.5" fill="#f8bbd0" />
+    
+    <!-- Terminal Lines -->
+    <text x="16" y="38" class="term-line-light">
+      <tspan class="term-prompt-light">&gt; USER:</tspan> SANTHIYA B
+    </text>
+    <text x="16" y="58" class="term-line-light">
+      <tspan class="term-prompt-light">&gt; FIELD:</tspan> ELECTRONICS &amp; COMMUNICATION (CGPA: 9.23)
+    </text>
+    <text x="16" y="78" class="term-line-light">
+      <tspan class="term-prompt-light">&gt; FOCUS:</tspan> VLSI FRONTEND &amp; WEB DEVELOPMENT<tspan class="cursor-blink-light">_</tspan>
+    </text>
+  </g>
+
+  <!-- Status Pills Row -->
+  <g transform="translate(45, 302)">
+    <!-- Pill 1: Degree & CGPA -->
+    <rect x="0" y="0" width="180" height="30" rx="8" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+    <text x="14" y="19" class="pill-text-light">🎓 B.Tech ECE &#8226; <tspan fill="#c2185b" font-weight="700">9.23 CGPA</tspan></text>
+
+    <!-- Pill 2: Portfolio Link -->
+    <rect x="192" y="0" width="185" height="30" rx="8" fill="#ffffff" stroke="#e91e63" stroke-width="1.2" />
+    <text x="206" y="19" class="pill-text-light" fill="#ad1457">🌐 thiya-portfolio.vercel.app</text>
+
+    <!-- Pill 3: Location -->
+    <rect x="388" y="0" width="120" height="30" rx="8" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+    <text x="400" y="19" class="pill-text-light">📍 Tamil Nadu</text>
+  </g>
+</svg>

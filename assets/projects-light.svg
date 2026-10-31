@@ -1,0 +1,139 @@
+<svg viewBox="0 0 850 310" width="100%" height="310" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient (Washi Paper Light) -->
+    <linearGradient id="projBgLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8fa" />
+      <stop offset="50%" stop-color="#ffeef3" />
+      <stop offset="100%" stop-color="#fedce5" />
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="projBorderLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f48fb1" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#f06292" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ec407a" stop-opacity="0.7" />
+    </linearGradient>
+
+    <!-- Tag Gradient -->
+    <linearGradient id="projTagGradLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c2185b" />
+      <stop offset="100%" stop-color="#e91e63" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .proj-head-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      fill: #221520;
+      text-anchor: middle;
+      letter-spacing: 0.5px;
+    }
+    .proj-sub-light {
+      font-family: 'Consolas', monospace;
+      font-weight: 600;
+      font-size: 11px;
+      fill: #ad1457;
+      text-anchor: middle;
+      letter-spacing: 1.5px;
+    }
+    .card-title-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 13.5px;
+      fill: #880e4f;
+    }
+    .card-desc-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      fill: #544450;
+    }
+    .badge-txt-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      fill: #ffffff;
+      text-anchor: middle;
+    }
+    .badge-txt-subtle-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      fill: #ad1457;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="846" height="306" rx="20" fill="url(#projBgLight)" stroke="url(#projBorderLight)" stroke-width="1.5" />
+
+  <!-- Title & Subtitle -->
+  <text x="425" y="38" class="proj-head-light">🌸 Featured Engineering Builds 🌸</text>
+  <text x="425" y="58" class="proj-sub-light">// HARDWARE PROTOTYPES &#8226; IOT SYSTEMS &#8226; CONTROL //</text>
+
+  <!-- ================= 2x2 PROJECT CARDS GRID ================= -->
+  <!-- Project 1: SOS WATCH -->
+  <g transform="translate(45, 78)">
+    <rect x="0" y="0" width="365" height="100" rx="12" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+    <text x="16" y="26" class="card-title-light">📡 SOS WATCH (LoRa Emergency Comm.)</text>
+    <text x="16" y="46" class="card-desc-light">Wearable emergency communication system sending SOS</text>
+    <text x="16" y="62" class="card-desc-light">alerts off-grid without cellular network dependency.</text>
+    <g transform="translate(16, 74)">
+      <rect x="0" y="0" width="62" height="16" rx="4" fill="url(#projTagGradLight)" />
+      <text x="31" y="11.5" class="badge-txt-light">EMBEDDED</text>
+      <rect x="68" y="0" width="45" height="16" rx="4" fill="#ffffff" stroke="#f06292" stroke-width="1" />
+      <text x="90.5" y="11.5" class="badge-txt-subtle-light">LoRa</text>
+      <rect x="119" y="0" width="38" height="16" rx="4" fill="#ffffff" stroke="#f06292" stroke-width="1" />
+      <text x="138" y="11.5" class="badge-txt-subtle-light">IoT</text>
+    </g>
+  </g>
+
+  <!-- Project 2: PATIENT MONITOR -->
+  <g transform="translate(440, 78)">
+    <rect x="0" y="0" width="365" height="100" rx="12" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+    <text x="16" y="26" class="card-title-light">💓 PATIENT MONITOR (Real-Time Telemetry)</text>
+    <text x="16" y="46" class="card-desc-light">Continuous patient biometric tracking unit streaming</text>
+    <text x="16" y="62" class="card-desc-light">sensor data with ultra-low latency over Wi-Fi IoT.</text>
+    <g transform="translate(16, 74)">
+      <rect x="0" y="0" width="38" height="16" rx="4" fill="url(#projTagGradLight)" />
+      <text x="19" y="11.5" class="badge-txt-light">IoT</text>
+      <rect x="44" y="0" width="58" height="16" rx="4" fill="#ffffff" stroke="#f06292" stroke-width="1" />
+      <text x="73" y="11.5" class="badge-txt-subtle-light">SENSORS</text>
+      <rect x="108" y="0" width="68" height="16" rx="4" fill="#ffffff" stroke="#f06292" stroke-width="1" />
+      <text x="142" y="11.5" class="badge-txt-subtle-light">TELEMETRY</text>
+    </g>
+  </g>
+
+  <!-- Project 3: SMART WAREHOUSE -->
+  <g transform="translate(45, 190)">
+    <rect x="0" y="0" width="365" height="100" rx="12" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+    <text x="16" y="26" class="card-title-light">🤖 SMART WAREHOUSE (Inventory Automation)</text>
+    <text x="16" y="46" class="card-desc-light">Automated sensor package counting system slashing</text>
+    <text x="16" y="62" class="card-desc-light">manual auditing time and human error by over 80%.</text>
+    <g transform="translate(16, 74)">
+      <rect x="0" y="0" width="76" height="16" rx="4" fill="url(#projTagGradLight)" />
+      <text x="38" y="11.5" class="badge-txt-light">AUTOMATION</text>
+      <rect x="82" y="0" width="38" height="16" rx="4" fill="#ffffff" stroke="#f06292" stroke-width="1" />
+      <text x="101" y="11.5" class="badge-txt-subtle-light">IoT</text>
+      <rect x="126" y="0" width="65" height="16" rx="4" fill="#ffffff" stroke="#f06292" stroke-width="1" />
+      <text x="158.5" y="11.5" class="badge-txt-subtle-light">EMBEDDED</text>
+    </g>
+  </g>
+
+  <!-- Project 4: PMSM MOTOR CONTROL -->
+  <g transform="translate(440, 190)">
+    <rect x="0" y="0" width="365" height="100" rx="12" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+    <text x="16" y="26" class="card-title-light">⚡ PMSM CONTROL (Adaptive PID Tuning)</text>
+    <text x="16" y="46" class="card-desc-light">Dynamic PID auto-tuning algorithm in MATLAB &amp; Simulink</text>
+    <text x="16" y="62" class="card-desc-light">for high-efficiency synchronous motor regulation.</text>
+    <g transform="translate(16, 74)">
+      <rect x="0" y="0" width="58" height="16" rx="4" fill="url(#projTagGradLight)" />
+      <text x="29" y="11.5" class="badge-txt-light">CONTROL</text>
+      <rect x="64" y="0" width="46" height="16" rx="4" fill="#ffffff" stroke="#f06292" stroke-width="1" />
+      <text x="87" y="11.5" class="badge-txt-subtle-light">PMSM</text>
+      <rect x="116" y="0" width="55" height="16" rx="4" fill="#ffffff" stroke="#f06292" stroke-width="1" />
+      <text x="143.5" y="11.5" class="badge-txt-subtle-light">MATLAB</text>
+    </g>
+  </g>
+</svg>

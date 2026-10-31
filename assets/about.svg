@@ -1,23 +1,23 @@
 <svg viewBox="0 0 850 320" width="100%" height="320" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06070c" />
+    <linearGradient id="aboutBgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060a" />
       <stop offset="55%" stop-color="#0e1019" />
-      <stop offset="100%" stop-color="#180a18" />
+      <stop offset="100%" stop-color="#180918" />
     </linearGradient>
 
-    <linearGradient id="aboutBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="aboutBorderDark" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#ff7597" stop-opacity="0.35" />
       <stop offset="50%" stop-color="#ff2a75" stop-opacity="0.12" />
       <stop offset="100%" stop-color="#ff7597" stop-opacity="0.4" />
     </linearGradient>
 
-    <linearGradient id="accentLineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="accentLineGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#ff2a75" />
       <stop offset="100%" stop-color="#ff7597" />
     </linearGradient>
 
-    <filter id="sakuraGlowAbout" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="sakuraGlowAboutDark" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3.5" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
@@ -31,45 +31,45 @@
       0%, 100% { opacity: 0.85; }
       50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(255, 42, 117, 0.5)); }
     }
-    .about-tag {
+    .about-tag-dark {
       font-family: 'Consolas', monospace;
       font-size: 11px;
       font-weight: 700;
       fill: #ff7597;
       letter-spacing: 2px;
     }
-    .about-head {
+    .about-head-dark {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 26px;
       font-weight: 800;
       fill: #ffffff;
       letter-spacing: -0.5px;
     }
-    .about-body {
+    .about-body-dark {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 12.8px;
       fill: #aeb8c7;
     }
-    .stat-val {
+    .stat-val-dark {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 19px;
       font-weight: 800;
       fill: #ff608f;
       animation: subtlePulse 3s infinite;
     }
-    .stat-lbl {
+    .stat-lbl-dark {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 10.5px;
       font-weight: 500;
       fill: #8c97a8;
     }
-    .card-title {
+    .card-title-dark {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 13.5px;
       font-weight: 700;
       fill: #ffdbe6;
     }
-    .card-desc {
+    .card-desc-dark {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 11.8px;
       fill: #9aa5b5;
@@ -77,48 +77,48 @@
   </style>
 
   <!-- Container Box -->
-  <rect x="2" y="2" width="846" height="316" rx="20" fill="url(#aboutBg)" stroke="url(#aboutBorder)" stroke-width="1.5" />
+  <rect x="2" y="2" width="846" height="316" rx="20" fill="url(#aboutBgDark)" stroke="url(#aboutBorderDark)" stroke-width="1.5" />
 
   <!-- Ambient Glow -->
   <circle cx="720" cy="160" r="110" fill="#ff2a75" fill-opacity="0.1" filter="blur(30px)" />
 
   <!-- LEFT COLUMN -->
   <g transform="translate(45, 32)">
-    <text x="0" y="0" class="about-tag">01. ABOUT_ME // SANTHIYA.EXE</text>
-    <text x="0" y="30" class="about-head">🌸 About Me 🌸</text>
+    <text x="0" y="0" class="about-tag-dark">01. ABOUT_ME // SANTHIYA.EXE</text>
+    <text x="0" y="30" class="about-head-dark">🌸 About Me 🌸</text>
     
-    <text x="0" y="60" class="about-body">I'm Santhiya B, a 3rd-semester B.Tech ECE student deeply interested</text>
-    <text x="0" y="80" class="about-body">in understanding how hardware and software come together to build</text>
-    <text x="0" y="100" class="about-body">real-world, scalable systems. Primary focus: VLSI &amp; Digital Design.</text>
+    <text x="0" y="60" class="about-body-dark">I'm Santhiya B, a 3rd-semester B.Tech ECE student deeply interested</text>
+    <text x="0" y="80" class="about-body-dark">in understanding how hardware and software come together to build</text>
+    <text x="0" y="100" class="about-body-dark">real-world, scalable systems. Primary focus: VLSI &amp; Digital Design.</text>
 
     <!-- 4 Stats Boxes Grid -->
     <g transform="translate(0, 122)">
       <!-- Stat 1: CGPA -->
       <g transform="translate(0, 0)">
         <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-        <text x="14" y="25" class="stat-val">9.23</text>
-        <text x="14" y="44" class="stat-lbl">CGPA &#8226; B.Tech ECE (3rd Sem)</text>
+        <text x="14" y="25" class="stat-val-dark">9.23</text>
+        <text x="14" y="44" class="stat-lbl-dark">CGPA &#8226; B.Tech ECE (3rd Sem)</text>
       </g>
       
       <!-- Stat 2: High School -->
       <g transform="translate(200, 0)">
         <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-        <text x="14" y="25" class="stat-val">90.16%</text>
-        <text x="14" y="44" class="stat-lbl">Sri Matha Matric Hr. Sec.</text>
+        <text x="14" y="25" class="stat-val-dark">90.16%</text>
+        <text x="14" y="44" class="stat-lbl-dark">Sri Matha Matric Hr. Sec.</text>
       </g>
 
       <!-- Stat 3: Primary Core -->
       <g transform="translate(0, 68)">
         <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-        <text x="14" y="25" class="stat-val">VLSI &amp; RTL</text>
-        <text x="14" y="44" class="stat-lbl">Primary: Verilog &amp; Digital</text>
+        <text x="14" y="25" class="stat-val-dark">VLSI &amp; RTL</text>
+        <text x="14" y="44" class="stat-lbl-dark">Primary: Verilog &amp; Digital</text>
       </g>
 
       <!-- Stat 4: Engineering Hobby -->
       <g transform="translate(200, 68)">
         <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-        <text x="14" y="25" class="stat-val">Embedded</text>
-        <text x="14" y="44" class="stat-lbl">&amp; Full-Stack Hobby</text>
+        <text x="14" y="25" class="stat-val-dark">Embedded</text>
+        <text x="14" y="44" class="stat-lbl-dark">&amp; Full-Stack Hobby</text>
       </g>
     </g>
   </g>
@@ -128,21 +128,21 @@
     <!-- Sector 1: VLSI Primary -->
     <g transform="translate(0, 0)">
       <rect x="0" y="0" width="320" height="110" rx="12" fill="#ffffff" fill-opacity="0.025" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-      <rect x="0" y="0" width="4" height="110" rx="2" fill="url(#accentLineGrad)" />
-      <text x="18" y="28" class="card-title">✦ PRIMARY: VLSI &amp; DIGITAL DESIGN</text>
-      <text x="18" y="52" class="card-desc">Exploring VLSI, digital logic, Verilog HDL,</text>
-      <text x="18" y="70" class="card-desc">semiconductor fundamentals, and hardware</text>
-      <text x="18" y="88" class="card-desc">architectures to build robust silicon systems.</text>
+      <rect x="0" y="0" width="4" height="110" rx="2" fill="url(#accentLineGradDark)" />
+      <text x="18" y="28" class="card-title-dark">✦ PRIMARY: VLSI &amp; DIGITAL DESIGN</text>
+      <text x="18" y="52" class="card-desc-dark">Exploring VLSI, digital logic, Verilog HDL,</text>
+      <text x="18" y="70" class="card-desc-dark">semiconductor fundamentals, and hardware</text>
+      <text x="18" y="88" class="card-desc-dark">architectures to build robust silicon systems.</text>
     </g>
 
     <!-- Sector 2: Full-Stack Secondary -->
     <g transform="translate(0, 126)">
       <rect x="0" y="0" width="320" height="110" rx="12" fill="#ffffff" fill-opacity="0.025" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
-      <rect x="0" y="0" width="4" height="110" rx="2" fill="url(#accentLineGrad)" />
-      <text x="18" y="28" class="card-title">✦ SECONDARY: FULL-STACK &amp; IoT</text>
-      <text x="18" y="52" class="card-desc">Building responsive web apps alongside embedded</text>
-      <text x="18" y="70" class="card-desc">IoT systems, understanding how complete end-to-end</text>
-      <text x="18" y="88" class="card-desc">software &amp; hardware platforms communicate.</text>
+      <rect x="0" y="0" width="4" height="110" rx="2" fill="url(#accentLineGradDark)" />
+      <text x="18" y="28" class="card-title-dark">✦ SECONDARY: FULL-STACK &amp; IoT</text>
+      <text x="18" y="52" class="card-desc-dark">Building responsive web apps alongside embedded</text>
+      <text x="18" y="70" class="card-desc-dark">IoT systems, understanding how complete end-to-end</text>
+      <text x="18" y="88" class="card-desc-dark">software &amp; hardware platforms communicate.</text>
     </g>
   </g>
 </svg>

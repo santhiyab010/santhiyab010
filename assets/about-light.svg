@@ -1,0 +1,135 @@
+<svg viewBox="0 0 850 320" width="100%" height="320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="aboutBgLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8fa" />
+      <stop offset="50%" stop-color="#ffeef3" />
+      <stop offset="100%" stop-color="#fedce5" />
+    </linearGradient>
+
+    <linearGradient id="aboutBorderLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f48fb1" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#f06292" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ec407a" stop-opacity="0.7" />
+    </linearGradient>
+
+    <linearGradient id="accentLineGradLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c2185b" />
+      <stop offset="100%" stop-color="#e91e63" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .about-tag-light {
+      font-family: 'Consolas', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      fill: #c2185b;
+      letter-spacing: 2px;
+    }
+    .about-head-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      fill: #221520;
+      letter-spacing: -0.5px;
+    }
+    .about-body-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12.8px;
+      fill: #544450;
+    }
+    .stat-val-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      fill: #ad1457;
+    }
+    .stat-lbl-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 10.5px;
+      font-weight: 600;
+      fill: #756370;
+    }
+    .card-title-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      fill: #880e4f;
+    }
+    .card-desc-light {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 11.8px;
+      fill: #544450;
+    }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="846" height="316" rx="20" fill="url(#aboutBgLight)" stroke="url(#aboutBorderLight)" stroke-width="1.5" />
+
+  <!-- Ambient Watercolor Wash -->
+  <circle cx="720" cy="160" r="110" fill="#f8bbd0" fill-opacity="0.3" filter="blur(30px)" />
+
+  <!-- LEFT COLUMN -->
+  <g transform="translate(45, 32)">
+    <text x="0" y="0" class="about-tag-light">01. ABOUT_ME // SANTHIYA.EXE</text>
+    <text x="0" y="30" class="about-head-light">🌸 About Me 🌸</text>
+    
+    <text x="0" y="60" class="about-body-light">I'm Santhiya B, a 3rd-semester B.Tech ECE student deeply interested</text>
+    <text x="0" y="80" class="about-body-light">in understanding how hardware and software come together to build</text>
+    <text x="0" y="100" class="about-body-light">real-world, scalable systems. Primary focus: VLSI &amp; Digital Design.</text>
+
+    <!-- 4 Stats Boxes Grid -->
+    <g transform="translate(0, 122)">
+      <!-- Stat 1: CGPA -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+        <text x="14" y="25" class="stat-val-light">9.23</text>
+        <text x="14" y="44" class="stat-lbl-light">CGPA &#8226; B.Tech ECE (3rd Sem)</text>
+      </g>
+      
+      <!-- Stat 2: High School -->
+      <g transform="translate(200, 0)">
+        <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+        <text x="14" y="25" class="stat-val-light">90.16%</text>
+        <text x="14" y="44" class="stat-lbl-light">Sri Matha Matric Hr. Sec.</text>
+      </g>
+
+      <!-- Stat 3: Primary Core -->
+      <g transform="translate(0, 68)">
+        <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+        <text x="14" y="25" class="stat-val-light">VLSI &amp; RTL</text>
+        <text x="14" y="44" class="stat-lbl-light">Primary: Verilog &amp; Digital</text>
+      </g>
+
+      <!-- Stat 4: Engineering Hobby -->
+      <g transform="translate(200, 68)">
+        <rect x="0" y="0" width="185" height="56" rx="10" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+        <text x="14" y="25" class="stat-val-light">Embedded</text>
+        <text x="14" y="44" class="stat-lbl-light">&amp; Full-Stack Hobby</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: Target Sectors Cards -->
+  <g transform="translate(485, 38)">
+    <!-- Sector 1: VLSI Primary -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="320" height="110" rx="12" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+      <rect x="0" y="0" width="4" height="110" rx="2" fill="url(#accentLineGradLight)" />
+      <text x="18" y="28" class="card-title-light">✦ PRIMARY: VLSI &amp; DIGITAL DESIGN</text>
+      <text x="18" y="52" class="card-desc-light">Exploring VLSI, digital logic, Verilog HDL,</text>
+      <text x="18" y="70" class="card-desc-light">semiconductor fundamentals, and hardware</text>
+      <text x="18" y="88" class="card-desc-light">architectures to build robust silicon systems.</text>
+    </g>
+
+    <!-- Sector 2: Full-Stack Secondary -->
+    <g transform="translate(0, 126)">
+      <rect x="0" y="0" width="320" height="110" rx="12" fill="#ffffff" stroke="#f48fb1" stroke-width="1.2" />
+      <rect x="0" y="0" width="4" height="110" rx="2" fill="url(#accentLineGradLight)" />
+      <text x="18" y="28" class="card-title-light">✦ SECONDARY: FULL-STACK &amp; IoT</text>
+      <text x="18" y="52" class="card-desc-light">Building responsive web apps alongside embedded</text>
+      <text x="18" y="70" class="card-desc-light">IoT systems, understanding how complete end-to-end</text>
+      <text x="18" y="88" class="card-desc-light">software &amp; hardware platforms communicate.</text>
+    </g>
+  </g>
+</svg>

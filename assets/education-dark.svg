@@ -1,0 +1,100 @@
+<svg viewBox="0 0 850 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="eduBgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05060a" />
+      <stop offset="50%" stop-color="#0e1019" />
+      <stop offset="100%" stop-color="#180a18" />
+    </linearGradient>
+
+    <linearGradient id="eduBorderDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7597" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#ff2a75" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ff7597" stop-opacity="0.4" />
+    </linearGradient>
+
+    <linearGradient id="tagPinkGradDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff2a75" />
+      <stop offset="100%" stop-color="#ff7597" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .edu-title-dark {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      fill: #ffffff;
+      letter-spacing: 0.3px;
+    }
+    .item-title-dark {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 13.5px;
+      fill: #ffdce6;
+    }
+    .item-sub-dark {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      fill: #8c97a8;
+    }
+    .badge-txt-dark {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 9.5px;
+      font-weight: 700;
+      fill: #ffffff;
+      text-anchor: middle;
+    }
+  </style>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="846" height="256" rx="20" fill="url(#eduBgDark)" stroke="url(#eduBorderDark)" stroke-width="1.5" />
+
+  <!-- LEFT: Education Journey -->
+  <g transform="translate(45, 28)">
+    <text x="0" y="0" class="edu-title-dark">🌸 Academic Background</text>
+
+    <!-- College -->
+    <g transform="translate(0, 18)">
+      <rect x="0" y="0" width="355" height="74" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="24" class="item-title-dark">B.Tech Electronics &amp; Communication</text>
+      <text x="16" y="44" class="item-sub-dark">Kalasalingam Academy of Research and Education</text>
+      <text x="16" y="62" class="item-sub-dark" fill="#ff7597">✦ 3rd Semester &#8226; CGPA: 9.23</text>
+      <rect x="286" y="14" width="56" height="20" rx="5" fill="url(#tagPinkGradDark)" />
+      <text x="314" y="28" class="badge-txt-dark">9.23 CGPA</text>
+    </g>
+
+    <!-- School -->
+    <g transform="translate(0, 102)">
+      <rect x="0" y="0" width="355" height="70" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="24" class="item-title-dark">Higher Secondary Education</text>
+      <text x="16" y="44" class="item-sub-dark">Sri Matha Matric Higher Secondary School</text>
+      <text x="16" y="60" class="item-sub-dark" fill="#ff7597">✦ Score: 90.16%</text>
+      <rect x="286" y="14" width="56" height="20" rx="5" fill="url(#tagPinkGradDark)" />
+      <text x="314" y="28" class="badge-txt-dark">90.16%</text>
+    </g>
+  </g>
+
+  <!-- Vertical Divider Line -->
+  <line x1="425" y1="30" x2="425" y2="230" stroke="#ff7597" stroke-opacity="0.2" stroke-dasharray="4 4" />
+
+  <!-- RIGHT: Target Sectors -->
+  <g transform="translate(450, 28)">
+    <text x="0" y="0" class="edu-title-dark">🌸 Engineering Domains</text>
+
+    <!-- Domain 1 -->
+    <g transform="translate(0, 18)">
+      <rect x="0" y="0" width="355" height="74" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="24" class="item-title-dark">PRIMARY: VLSI &amp; Digital Frontend Design</text>
+      <text x="16" y="44" class="item-sub-dark">Verilog HDL, Semiconductor Fundamentals, RTL Design</text>
+      <text x="16" y="62" class="item-sub-dark" fill="#ff7597">✦ Silicon architectures and hardware synthesis</text>
+    </g>
+
+    <!-- Domain 2 -->
+    <g transform="translate(0, 102)">
+      <rect x="0" y="0" width="355" height="70" rx="10" fill="#ffffff" fill-opacity="0.03" stroke="#ff7597" stroke-opacity="0.18" stroke-width="1" />
+      <text x="16" y="24" class="item-title-dark">SECONDARY: Embedded IoT &amp; Full-Stack</text>
+      <text x="16" y="44" class="item-sub-dark">Microcontrollers, LoRa wireless, React &amp; Modern Web</text>
+      <text x="16" y="60" class="item-sub-dark" fill="#ff7597">✦ End-to-end hardware-software integration</text>
+    </g>
+  </g>
+</svg>
