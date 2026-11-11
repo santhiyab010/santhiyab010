@@ -47,10 +47,32 @@
       fill: #ffffff;
       text-anchor: middle;
     }
+    @keyframes fallPetalA {
+      0% { transform: translate(0px, -20px) rotate(0deg); opacity: 0; }
+      15% { opacity: 0.9; }
+      85% { opacity: 0.75; }
+      100% { transform: translate(-80px, 290px) rotate(320deg); opacity: 0; }
+    }
+    @keyframes fallPetalB {
+      0% { transform: translate(0px, -20px) rotate(0deg); opacity: 0; }
+      20% { opacity: 0.9; }
+      80% { opacity: 0.7; }
+      100% { transform: translate(70px, 290px) rotate(-280deg); opacity: 0; }
+    }
+    .p-fall-a { animation: fallPetalA 7.5s infinite linear; }
+    .p-fall-b { animation: fallPetalB 9.0s infinite linear; animation-delay: 2.8s; }
   </style>
 
   <!-- Container Box -->
   <rect x="2" y="2" width="846" height="256" rx="20" fill="url(#eduBgLight)" stroke="url(#eduBorderLight)" stroke-width="1.5" />
+
+  <!-- Animated Falling Petals -->
+  <g class="p-fall-a" transform="translate(180, 0)">
+    <path d="M 0 0 C 5 -3, 10 2, 7 8 C 2 11, -3 8, 0 0 Z" fill="#e91e63" opacity="0.8" />
+  </g>
+  <g class="p-fall-b" transform="translate(670, 0)">
+    <path d="M 0 0 C 6 -3, 11 3, 8 9 C 3 13, -3 9, 0 0 Z" fill="#f48fb1" opacity="0.8" />
+  </g>
 
   <!-- LEFT: Education Journey -->
   <g transform="translate(45, 28)">
@@ -101,3 +123,4 @@
     </g>
   </g>
 </svg>
+

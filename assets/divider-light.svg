@@ -7,26 +7,60 @@
       <stop offset="75%" stop-color="#ec407a" stop-opacity="0.3" />
       <stop offset="100%" stop-color="#ec407a" stop-opacity="0" />
     </linearGradient>
+    <filter id="sakuraGlowDivLight" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
   </defs>
+
+  <style>
+    /* <![CDATA[ */
+    @keyframes crestPulseLight {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(194, 24, 91, 0.4)); }
+      50% { transform: scale(1.08); filter: drop-shadow(0 0 6px rgba(194, 24, 91, 0.8)); }
+    }
+    @keyframes petalFloat1 {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(4px, -3px); }
+    }
+    @keyframes petalFloat2 {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(-4px, 3px); }
+    }
+    .kamon-crest-light {
+      animation: crestPulseLight 3.5s infinite ease-in-out;
+      transform-origin: 425px 20px;
+    }
+    .petal-f1 { animation: petalFloat1 4s infinite ease-in-out; }
+    .petal-f2 { animation: petalFloat2 4.5s infinite ease-in-out; }
+    /* ]]> */
+  </style>
 
   <!-- Divider Line -->
   <line x1="50" y1="20" x2="800" y2="20" stroke="url(#divLineGradLight)" stroke-width="1.5" />
   
-  <!-- Central Cherry Blossom Accent (Light Mode) -->
-  <g transform="translate(425, 20)">
-    <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#e91e63" stroke-width="1.2" />
+  <!-- Central Cherry Blossom Kamon Crest (Light Mode) -->
+  <g class="kamon-crest-light" transform="translate(425, 20)" filter="url(#sakuraGlowDivLight)">
+    <circle cx="0" cy="0" r="14" fill="#ffffff" stroke="#c2185b" stroke-width="1.2" />
     <!-- 5 Sakura Petals -->
     <circle cx="0" cy="-6" r="3.8" fill="#e91e63" />
     <circle cx="5.7" cy="-1.8" r="3.8" fill="#e91e63" />
     <circle cx="3.5" cy="5" r="3.8" fill="#c2185b" />
     <circle cx="-3.5" cy="5" r="3.8" fill="#c2185b" />
     <circle cx="-5.7" cy="-1.8" r="3.8" fill="#e91e63" />
-    <circle cx="0" cy="0" r="2" fill="#fff" />
+    <circle cx="0" cy="0" r="2" fill="#ffffff" />
   </g>
 
-  <!-- Side floating petals -->
-  <circle cx="360" cy="17" r="2.5" fill="#f06292" opacity="0.85" />
-  <circle cx="390" cy="23" r="2" fill="#ad1457" opacity="0.7" />
-  <circle cx="460" cy="16" r="2" fill="#ad1457" opacity="0.7" />
-  <circle cx="490" cy="22" r="2.5" fill="#f06292" opacity="0.85" />
+  <!-- Floating Ambient Petals -->
+  <g class="petal-f1">
+    <circle cx="360" cy="17" r="2.5" fill="#f06292" opacity="0.85" />
+    <circle cx="490" cy="22" r="2.5" fill="#f06292" opacity="0.85" />
+  </g>
+  <g class="petal-f2">
+    <circle cx="390" cy="23" r="2" fill="#ad1457" opacity="0.75" />
+    <circle cx="460" cy="16" r="2" fill="#ad1457" opacity="0.75" />
+  </g>
 </svg>
